@@ -10,11 +10,11 @@ const useStyles = makeStyles(() => ({
     fontFamily: "Roboto, sans-serif",
     color: "#D32F2F",
     marginTop: 5,
-    marginRight: 110,
+    marginRight: 120,
   },
 }));
 
-export default function Calendar({ value, setDate, dateError }) {
+function Calendar({ value, setDate, dateError }) {
   const classes = useStyles();
 
   return (
@@ -40,3 +40,5 @@ export default function Calendar({ value, setDate, dateError }) {
     </Grid>
   );
 }
+
+export default Calendar;
