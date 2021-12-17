@@ -18,7 +18,7 @@ export default function Calendar({ value, setDate, dateError }) {
   const classes = useStyles();
 
   return (
-    <Grid item xs={12} sm={6}>
+    <Grid style={{ margin: "20px 0" }} item xs={12} sm={6}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <DatePicker
           required
