@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eventksa/static/css/main.11ccf870.css",
+    "main.js": "/eventksa/static/js/main.29f5029c.js",
+    "index.html": "/eventksa/index.html",
+    "main.11ccf870.css.map": "/eventksa/static/css/main.11ccf870.css.map",
+    "main.29f5029c.js.map": "/eventksa/static/js/main.29f5029c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11ccf870.css",
+    "static/js/main.29f5029c.js"
+  ]
+}
