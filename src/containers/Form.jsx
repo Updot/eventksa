@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import CustomField from "../components/CustomField";
+import Calendar from "../components/Calendar";
 
 const useStyles = makeStyles(() => ({
   formContainer: {
@@ -23,13 +24,15 @@ const initValues = {
   lastName: "",
   email: "",
   phone: "",
-  date: new Date(),
+  date: null,
   tickets: 1,
 };
 
 function Form() {
   const [data, setData] = useState(initValues);
+  const [date, setDate] = useState(null);
   const [errors, setErrors] = useState({});
+  const [dateError, setDateError] = useState(false);
 
   const classes = useStyles();
 
@@ -46,6 +49,13 @@ function Form() {
     });
   };
 
+  useEffect(() => {
+    setData({
+      ...data,
+      date: date,
+    });
+  }, [date]);
+
   const validate = (e) => {
     let temp = {};
 
@@ -60,6 +70,7 @@ function Form() {
     temp.phone = /^(\+971)?[0-9]{9}$/.test(data.phone)
       ? ""
       : "Invalid phone number";
+    temp.date = data.date !== null ? "" : "This field is required";
 
     setErrors({ ...temp });
 
@@ -68,7 +79,10 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validate()) alert("bruh");
+    if (validate()) alert("successful");
+
+    if (data.date === null) setDateError(true);
+    else setDateError(false);
   };
 
   return (
@@ -83,8 +97,7 @@ function Form() {
       >
         <Grid container className={classes.form}>
           <CustomField
-            data={data.firstName}
-            setData={setData}
+            value={data.firstName}
             label="First name"
             type="text"
             name="firstName"
@@ -92,8 +105,7 @@ function Form() {
             error={errors.firstName}
           />
           <CustomField
-            data={data.lastName}
-            setData={setData}
+            value={data.lastName}
             label="Last name"
             type="text"
             name="lastName"
@@ -101,8 +113,7 @@ function Form() {
             error={errors.lastName}
           />
           <CustomField
-            data={data.email}
-            setData={setData}
+            value={data.email}
             label="Email address"
             type="email"
             name="email"
@@ -110,13 +121,18 @@ function Form() {
             error={errors.email}
           />
           <CustomField
-            data={data.phone}
-            setData={setData}
+            value={data.phone}
             label="Phone number"
             type="text"
             name="phone"
             handleInputChange={handleInputChange}
             error={errors.phone}
+          />
+          <Calendar
+            value={date}
+            setDate={setDate}
+            handleInputChange={handleInputChange}
+            dateError={dateError}
           />
         </Grid>
         <Button variant="outlined" type="submit">
