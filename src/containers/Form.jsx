@@ -34,6 +34,7 @@ function Form() {
   const [date, setDate] = useState(null);
   const [errors, setErrors] = useState({});
   const [dateError, setDateError] = useState(false);
+  const [tickets, setTickets] = useState(1);
 
   const classes = useStyles();
 
@@ -56,6 +57,13 @@ function Form() {
       date: date,
     });
   }, [date]);
+
+  useEffect(() => {
+    setData({
+      ...data,
+      tickets: tickets,
+    });
+  }, [tickets]);
 
   const validate = (e) => {
     let temp = {};
@@ -132,7 +140,7 @@ function Form() {
             error={errors.phone}
           />
           <Calendar value={date} setDate={setDate} dateError={dateError} />
-          <Tickets value={data.tickets} handleInputChange={handleInputChange} />
+          <Tickets value={tickets} setTickets={setTickets} />
         </Grid>
         <Button variant="outlined" type="submit">
           Book tickets

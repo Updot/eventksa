@@ -6,32 +6,34 @@ import RemoveIcon from "@mui/icons-material/Remove";
 
 const useStyles = makeStyles(() => ({
   field: {
-    width: "30%",
+    width: "40%",
   },
 }));
 
-function Tickets({ value, handleInputChange }) {
+function Tickets({ value, setTickets }) {
   const classes = useStyles();
 
-  //   const decreaseTickets = () => {
-  //       if (value > 1)
-  //   }
+  const decreaseTickets = () => {
+    if (value > 1) setTickets((prev) => prev - 1);
+  };
+  const increaseTickets = () => {
+    if (value < 5) setTickets((prev) => prev + 1);
+  };
 
   return (
-    <Grid item xs={12} sm={6}>
-      <IconButton style={{ margin: 10 }}>
+    <Grid item xs={12} sm={6} style={{ marginTop: 20 }}>
+      <IconButton style={{ margin: 10 }} onClick={decreaseTickets}>
         <RemoveIcon />
       </IconButton>
       <TextField
         className={classes.field}
-        required
         label="Tickets"
         type="number"
         name="tickets"
         value={value}
-        onChange={handleInputChange}
+        InputProps={{ readOnly: true }}
       />
-      <IconButton style={{ margin: 10 }}>
+      <IconButton style={{ margin: 10 }} onClick={increaseTickets}>
         <AddIcon />
       </IconButton>
     </Grid>
