@@ -24,7 +24,6 @@ function CustomField({
       <TextField
         className={classes.field}
         required
-        id="outlined-required"
         label={label}
         type={type}
         name={name}

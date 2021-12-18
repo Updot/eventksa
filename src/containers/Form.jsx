@@ -3,6 +3,7 @@ import { Grid, Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import CustomField from "../components/CustomField";
 import Calendar from "../components/Calendar";
+import Tickets from "../components/Tickets";
 
 const useStyles = makeStyles(() => ({
   formContainer: {
@@ -85,6 +86,8 @@ function Form() {
     else setDateError(false);
   };
 
+  console.log(data);
+
   return (
     <div className={classes.formContainer}>
       <h1 className={classes.formHeader}>Book your tickets</h1>
@@ -128,12 +131,8 @@ function Form() {
             handleInputChange={handleInputChange}
             error={errors.phone}
           />
-          <Calendar
-            value={date}
-            setDate={setDate}
-            handleInputChange={handleInputChange}
-            dateError={dateError}
-          />
+          <Calendar value={date} setDate={setDate} dateError={dateError} />
+          <Tickets value={data.tickets} handleInputChange={handleInputChange} />
         </Grid>
         <Button variant="outlined" type="submit">
           Book tickets
