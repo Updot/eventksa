@@ -29,6 +29,8 @@ const initValues = {
   tickets: 1,
 };
 
+let formData = new FormData();
+
 function Form() {
   const [data, setData] = useState(initValues);
   const [date, setDate] = useState(null);
@@ -51,21 +53,19 @@ function Form() {
     });
   };
 
-  useEffect(() => {
-    setData({
-      ...data,
-      date: date,
-    });
-  }, [date]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  useEffect(() => {
-    setData({
-      ...data,
-      tickets: tickets,
-    });
-  }, [tickets]);
+    if (data.date === null) setDateError(true);
+    else setDateError(false);
 
-  const validate = (e) => {
+    if (validate()) {
+      alert("successful");
+      console.log(Array.from(formData));
+    }
+  };
+
+  const validate = () => {
     let temp = {};
 
     temp.firstName = data.firstName ? "" : "This field is required";
@@ -86,15 +86,23 @@ function Form() {
     return Object.values(temp).every((x) => x === "");
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) alert("successful");
+  useEffect(() => {
+    for (let key in data) formData.set(key, data[key]);
+  }, [data]);
 
-    if (data.date === null) setDateError(true);
-    else setDateError(false);
-  };
+  useEffect(() => {
+    setData({
+      ...data,
+      date: date,
+    });
+  }, [date]);
 
-  console.log(data);
+  useEffect(() => {
+    setData({
+      ...data,
+      tickets: tickets,
+    });
+  }, [tickets]);
 
   return (
     <div className={classes.formContainer}>
