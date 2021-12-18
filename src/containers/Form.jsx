@@ -112,7 +112,7 @@ function Form() {
 
   return (
     <>
-      {success && <CustomModal setSuccess={setSuccess} />}
+      {<CustomModal setSuccess={setSuccess} />}
       <div className={classes.formContainer}>
         <h1 className={classes.formHeader}>Book your tickets</h1>
         <Box

@@ -10,25 +10,50 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
     backgroundColor: "white",
-    padding: "80px 60px",
+    width: "80%",
     maxWidth: 450,
     borderRadius: 18,
     textAlign: "center",
+
+    [theme.breakpoints.up("xs")]: {
+      padding: "50px 30px",
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: "80px 60px",
+    },
   },
   closeButton: {
     position: "absolute !important",
-    top: 40,
-    right: 40,
+    [theme.breakpoints.up("xs")]: {
+      top: 20,
+      right: 20,
+    },
+    [theme.breakpoints.up("md")]: {
+      top: 40,
+      right: 40,
+    },
   },
   heading: {
     color: theme.palette.primary.main,
     fontFamily: "Lateef, serif !important",
+    [theme.breakpoints.up("xs")]: {
+      marginTop: "20px !important",
+    },
+    [theme.breakpoints.up("sm")]: {
+      marginTop: "0px !important",
+    },
   },
   subtext: {
-    width: "60%",
-    margin: "40px auto 70px auto",
     fontFamily: "Alef, sans-serif ",
     color: theme.palette.grey.main,
+    [theme.breakpoints.up("xs")]: {
+      width: "70%",
+      margin: "30px auto 60px auto",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "60%",
+      margin: "40px auto 70px auto",
+    },
   },
   button: {
     fontFamily: "Alef, sans-serif !important",
