@@ -11,6 +11,9 @@ function App() {
       secondary: {
         main: "#F3C8A6",
       },
+      grey: {
+        main: "#858586",
+      },
     },
   });
   return (
