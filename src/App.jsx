@@ -8,12 +8,15 @@ function App() {
       primary: {
         main: "#132C70",
       },
-      secondary: {
+      orange: {
         main: "#F3C8A6",
       },
       grey: {
         main: "#858586",
       },
+    },
+    typography: {
+      fontFamily: "Alef, serif",
     },
   });
   return (
