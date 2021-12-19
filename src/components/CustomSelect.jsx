@@ -26,10 +26,14 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
 
   return (
     <Grid item xs={12} sm={sm} style={{ padding: "0 5px" }}>
-      <Box sx={{ minWidth: 120 }} className={classes.box}>
+      <Box className={classes.box}>
         <FormControl fullWidth {...(error && { error: true })}>
           <InputLabel>Province</InputLabel>
-          <Select value={value} onChange={handleChange}>
+          <Select
+            value={value}
+            onChange={handleChange}
+            style={{ textAlign: "left" }}
+          >
             <MenuItem value={"Al-Bahah Province"}>Al-Bahah Province</MenuItem>
             <MenuItem value={"Al-Jawf Province"}>Al-Jawf Province</MenuItem>
             <MenuItem value={"Aseer Province"}>Aseer Province</MenuItem>
