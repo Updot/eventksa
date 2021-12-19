@@ -1,5 +1,6 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Landing from "./containers/Landing";
 import Form from "./containers/Form";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
+      <Landing />
       <Form />
     </ThemeProvider>
   );
