@@ -9,12 +9,12 @@ import {
   Grid,
 } from "@mui/material";
 
-function Title({ handleInputChange, error = null }) {
+function Title({ value, handleInputChange, error = null }) {
   return (
     <Grid item xs={12} style={{ margin: "0 0 10px 20px", textAlign: "left" }}>
       <FormControl component="fieldset" error={!!error}>
         <FormLabel component="legend">Title</FormLabel>
-        <RadioGroup row name="title" onChange={handleInputChange}>
+        <RadioGroup value={value} row name="title" onChange={handleInputChange}>
           <FormControlLabel value="Mr." control={<Radio />} label="Mr." />
           <FormControlLabel value="Mrs." control={<Radio />} label="Mrs." />
         </RadioGroup>
