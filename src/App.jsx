@@ -12,11 +12,13 @@ function App() {
         main: "#F3C8A6",
       },
       grey: {
-        main: "#858586",
+        light: "#FAFAFA",
+        main: "#D4D4D4",
+        dark: "#858586",
       },
     },
     typography: {
-      fontFamily: "Alef, serif",
+      fontFamily: "Alef, sans-serif",
     },
   });
   return (

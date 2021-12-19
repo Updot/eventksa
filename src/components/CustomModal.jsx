@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subtext: {
     fontFamily: "Alef, sans-serif ",
-    color: theme.palette.grey.main,
+    color: theme.palette.grey.dark,
     [theme.breakpoints.up("xs")]: {
       width: "70%",
       margin: "30px auto 60px auto",

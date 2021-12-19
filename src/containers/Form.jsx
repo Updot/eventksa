@@ -5,8 +5,11 @@ import CustomField from "../components/CustomField";
 import Calendar from "../components/Calendar";
 import Tickets from "../components/Tickets";
 import CustomModal from "../components/CustomModal";
+import CustomSelect from "../components/CustomSelect";
+import CheckIcon from "@mui/icons-material/Check";
+import CloseIcon from "@mui/icons-material/Close";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   formContainer: {
     textAlign: "center",
   },
@@ -18,6 +21,10 @@ const useStyles = makeStyles(() => ({
     width: "70% !important",
     alignItems: "center",
     justifyContent: "center",
+  },
+  buttonsContainer: {
+    maxWidth: 300,
+    margin: "auto",
   },
 }));
 
@@ -88,6 +95,10 @@ function Form() {
     }
   };
 
+  const clearFields = () => {
+    setData(initValues);
+  };
+
   useEffect(() => {
     for (let key in data) formData.set(key, data[key]);
   }, [data]);
@@ -114,7 +125,6 @@ function Form() {
     <>
       {success && <CustomModal setSuccess={setSuccess} />}
       <div className={classes.formContainer}>
-        <h1 className={classes.formHeader}>Book your tickets</h1>
         <Box
           component="form"
           noValidate
@@ -130,6 +140,7 @@ function Form() {
               name="firstName"
               handleInputChange={handleInputChange}
               error={errors.firstName}
+              sm={12}
             />
             <CustomField
               value={data.lastName}
@@ -138,6 +149,17 @@ function Form() {
               name="lastName"
               handleInputChange={handleInputChange}
               error={errors.lastName}
+              sm={12}
+            />
+            <CustomSelect />
+            <CustomField
+              value={data.phone}
+              label="Phone number"
+              type="text"
+              name="phone"
+              handleInputChange={handleInputChange}
+              error={errors.phone}
+              sm={4}
             />
             <CustomField
               value={data.email}
@@ -146,25 +168,38 @@ function Form() {
               name="email"
               handleInputChange={handleInputChange}
               error={errors.email}
-            />
-            <CustomField
-              value={data.phone}
-              label="Phone number"
-              type="text"
-              name="phone"
-              handleInputChange={handleInputChange}
-              error={errors.phone}
+              sm={4}
             />
             <Calendar
               value={data.date}
               setDate={setDate}
               dateError={dateError}
             />
-            <Tickets value={data.tickets} setTickets={setTickets} />
+            {/* <Tickets value={data.tickets} setTickets={setTickets} /> */}
           </Grid>
-          <Button variant="outlined" type="submit">
-            Book tickets
-          </Button>
+          <Grid container className={classes.buttonsContainer}>
+            <Grid item xs={4}>
+              <Button
+                startIcon={<CloseIcon />}
+                disableElevation
+                variant="contained"
+                style={{ backgroundColor: "#D4D4D4", color: "black" }}
+                onClick={clearFields}
+              >
+                Discard
+              </Button>
+            </Grid>
+            <Grid item xs={8}>
+              <Button
+                startIcon={<CheckIcon />}
+                disableElevation
+                variant="contained"
+                type="submit"
+              >
+                Book tickets
+              </Button>
+            </Grid>
+          </Grid>
         </Box>
       </div>
     </>
