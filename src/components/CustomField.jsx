@@ -5,7 +5,7 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({
   field: {
     margin: "5px 0 !important",
-    width: "90%",
+    width: "100%",
   },
 }));
 
@@ -21,10 +21,9 @@ function CustomField({
   const classes = useStyles();
 
   return (
-    <Grid item xs={12} sm={sm}>
+    <Grid item xs={12} sm={sm} style={{ padding: "0 5px" }}>
       <TextField
         className={classes.field}
-        sx={{ border: "none" }}
         label={label}
         type={type}
         name={name}

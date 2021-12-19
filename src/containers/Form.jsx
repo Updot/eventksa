@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "50px auto",
     width: "70% !important",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
   },
   buttonsContainer: {
     maxWidth: 300,
@@ -132,7 +132,11 @@ function Form() {
           className={classes.box}
           onSubmit={handleSubmit}
         >
-          <Grid container className={classes.form}>
+          <Grid
+            container
+            className={classes.form}
+            justifyContent="space-between"
+          >
             <CustomField
               value={data.firstName}
               label="First name"
@@ -151,7 +155,7 @@ function Form() {
               error={errors.lastName}
               sm={12}
             />
-            <CustomSelect />
+            <CustomSelect sm={4} />
             <CustomField
               value={data.phone}
               label="Phone number"
@@ -175,7 +179,7 @@ function Form() {
               setDate={setDate}
               dateError={dateError}
             />
-            {/* <Tickets value={data.tickets} setTickets={setTickets} /> */}
+            <Tickets value={data.tickets} setTickets={setTickets} />
           </Grid>
           <Grid container className={classes.buttonsContainer}>
             <Grid item xs={4}>
