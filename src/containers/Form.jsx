@@ -33,6 +33,7 @@ const initValues = {
   lastName: "",
   email: "",
   phone: "",
+  province: "",
   date: null,
   tickets: 1,
 };
@@ -44,6 +45,7 @@ function Form() {
   const [date, setDate] = useState(null);
   const [errors, setErrors] = useState({});
   const [dateError, setDateError] = useState(false);
+  const [province, setProvince] = useState("");
   const [tickets, setTickets] = useState(1);
   const [success, setSuccess] = useState(false);
 
@@ -64,6 +66,7 @@ function Form() {
       ? ""
       : "Invalid phone number";
     temp.date = data.date !== null ? "" : "This field is required";
+    temp.province = data.province !== "" ? "" : "This field is required";
 
     setErrors({ ...temp });
 
@@ -118,6 +121,13 @@ function Form() {
   }, [tickets]);
 
   useEffect(() => {
+    setData({
+      ...data,
+      province: province,
+    });
+  }, [province]);
+
+  useEffect(() => {
     setData(initValues);
   }, [success]);
 
@@ -155,7 +165,12 @@ function Form() {
               error={errors.lastName}
               sm={12}
             />
-            <CustomSelect sm={4} />
+            <CustomSelect
+              sm={4}
+              value={data.province}
+              setProvince={setProvince}
+              error={errors.province}
+            />
             <CustomField
               value={data.phone}
               label="Phone number"

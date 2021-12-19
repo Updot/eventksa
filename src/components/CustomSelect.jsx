@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Grid,
   InputLabel,
   MenuItem,
   FormControl,
+  FormHelperText,
   Select,
   Box,
 } from "@mui/material";
@@ -16,25 +17,33 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function CustomSelect({ sm }) {
-  const [age, setAge] = useState("");
-
+function CustomSelect({ value, setProvince, sm, error = null }) {
   const classes = useStyles();
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setProvince(event.target.value);
   };
 
   return (
     <Grid item xs={12} sm={sm} style={{ padding: "0 5px" }}>
       <Box sx={{ minWidth: 120 }} className={classes.box}>
-        <FormControl fullWidth>
-          <InputLabel>Age</InputLabel>
-          <Select value={age} label="Age" onChange={handleChange}>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+        <FormControl fullWidth {...(error && { error: true })}>
+          <InputLabel>Province</InputLabel>
+          <Select value={value} onChange={handleChange}>
+            <MenuItem value={"Al-Bahah Province"}>Al-Bahah Province</MenuItem>
+            <MenuItem value={"Al-Jawf Province"}>Al-Jawf Province</MenuItem>
+            <MenuItem value={"Aseer Province"}>Aseer Province</MenuItem>
+            <MenuItem value={"Eastern Province"}>Eastern Province</MenuItem>
+            <MenuItem value={"Ha'il Province"}>Ha'il Province</MenuItem>
+            <MenuItem value={"Jizan Province"}>Jizan Province</MenuItem>
+            <MenuItem value={"Madinah Province"}>Madinah Province</MenuItem>
+            <MenuItem value={"Makkah Province"}>Makkah Province</MenuItem>
+            <MenuItem value={"Najran Province"}>Najran Province</MenuItem>
+            <MenuItem value={"Qassim Province"}>Qassim Province</MenuItem>
+            <MenuItem value={"Riyadh Province"}>Riyadh Province</MenuItem>
+            <MenuItem value={"Tabuk Province"}>Tabuk Province</MenuItem>
           </Select>
+          {error && <FormHelperText>{error}</FormHelperText>}
         </FormControl>
       </Box>
     </Grid>
