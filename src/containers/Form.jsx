@@ -8,6 +8,7 @@ import CustomModal from "../components/CustomModal";
 import CustomSelect from "../components/CustomSelect";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
+import Title from "../components/Title";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const initValues = {
+  title: "",
   firstName: "",
   lastName: "",
   email: "",
@@ -54,6 +56,7 @@ function Form() {
   const validate = () => {
     let temp = {};
 
+    temp.title = data.title !== "" ? "" : "This field is required";
     temp.firstName = data.firstName ? "" : "This field is required";
     temp.lastName = data.lastName ? "" : "This field is required";
     temp.email =
@@ -147,6 +150,11 @@ function Form() {
             className={classes.form}
             justifyContent="space-between"
           >
+            <Title
+              value={data.title}
+              handleInputChange={handleInputChange}
+              error={errors.title}
+            />
             <CustomField
               value={data.firstName}
               label="First name"

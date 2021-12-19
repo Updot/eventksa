@@ -27,7 +27,7 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
   return (
     <Grid item xs={12} sm={sm} style={{ padding: "0 5px" }}>
       <Box className={classes.box}>
-        <FormControl fullWidth {...(error && { error: true })}>
+        <FormControl fullWidth error={!!error}>
           <InputLabel>Province</InputLabel>
           <Select
             value={value}
