@@ -114,4 +114,39 @@ footer.footer {
       }
     }
   }
+
+  .lower-footer {
+    background-color: $primary-darker;
+    color: white;
+
+    .lang-container {
+      text-align: right;
+      .lang-select {
+        width: 100px;
+
+        .select-field {
+          svg {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .button-container {
+      position: relative;
+      .icon-button {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+
+        background-color: white;
+        color: black;
+        min-width: 25px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+      }
+    }
+  }
 }

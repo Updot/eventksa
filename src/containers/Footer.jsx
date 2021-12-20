@@ -1,6 +1,7 @@
-import React from "react";
-import { Grid } from "@mui/material";
+import React, { useState } from "react";
+import { Grid, FormControl, Button, Select, MenuItem } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import facebook from "../images/facebook.png";
 import instagram from "../images/instagram.png";
 import website from "../images/website.png";
@@ -9,7 +10,17 @@ import pinOrange from "../images/PinOrange.png";
 const useStyles = makeStyles((theme) => ({}));
 
 function Footer() {
+  const [language, setLanguage] = useState("English");
+
   const classes = useStyles();
+
+  const handleChange = (event) => {
+    setLanguage(event.target.value);
+  };
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer className="footer">
@@ -41,7 +52,32 @@ function Footer() {
           </div>
         </Grid>
       </Grid>
-      <Grid container className="lower-footer"></Grid>
+      <Grid container className="lower-footer">
+        <Grid item xs={9} sm={10} className="lang-container">
+          <FormControl className="lang-select">
+            <Select
+              value={language}
+              label="Language"
+              defaultValue="English"
+              onChange={handleChange}
+              className="select-field"
+              style={{ color: "white" }}
+            >
+              <MenuItem value={"English"}>English</MenuItem>
+              <MenuItem value={"Arabic"}>عربى</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
+        <Grid item xs={3} sm={2} className="button-container">
+          <Button
+            onClick={handleClick}
+            disableElevation
+            className="icon-button"
+          >
+            <KeyboardArrowUpIcon />
+          </Button>
+        </Grid>
+      </Grid>
     </footer>
   );
 }
