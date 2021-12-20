@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const initValues = {
-  title: "",
+  mr: null,
   firstName: "",
   lastName: "",
   email: "",
@@ -57,7 +57,7 @@ function Form() {
   const validate = () => {
     let temp = {};
 
-    temp.title = data.title !== "" ? "" : "This field is required";
+    temp.mr = data.mr !== null ? "" : "This field is required";
     temp.firstName = data.firstName ? "" : "This field is required";
     temp.lastName = data.lastName ? "" : "This field is required";
     temp.email =
@@ -152,9 +152,9 @@ function Form() {
             justifyContent="space-between"
           >
             <Title
-              value={data.title}
+              value={data.mr}
               handleInputChange={handleInputChange}
-              error={errors.title}
+              error={errors.mr}
             />
             <CustomField
               value={data.firstName}
