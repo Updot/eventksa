@@ -61,9 +61,15 @@ function Footer() {
         <Grid className="item" item xs={12}>
           <p className="follow-text">Follow Us</p>
           <div className="social-icons">
-            <img src={facebook} alt="Facebook" />
-            <img src={instagram} alt="Instagram" />
-            <img src={website} alt="Website" />
+            <div className="image-container">
+              <img src={facebook} alt="Facebook" />
+            </div>
+            <div className="image-container">
+              <img src={instagram} alt="Instagram" />
+            </div>
+            <div className="image-container">
+              <img src={website} alt="Website" />
+            </div>
           </div>
         </Grid>
         <Grid className="item" item xs={6}>

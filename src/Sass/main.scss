@@ -37,7 +37,6 @@ footer.footer {
         font-family: Lateef, serif;
         font-size: 18px;
         color: $orange-main;
-        transform: translateX(-10px);
       }
 
       .social-icons {
@@ -47,14 +46,16 @@ footer.footer {
         align-items: center;
         justify-content: space-around;
 
-        img {
-          max-width: 40px;
-          max-height: 40px;
+        .image-container {
           margin-top: 25px;
-
-          @media (max-width: $small-screen) {
-            max-width: 25px;
-            max-height: 25px;
+          width: 40px;
+          img {
+            max-width: 40px;
+            max-height: 40px;
+            @media (max-width: $small-screen) {
+              max-width: 25px;
+              max-height: 25px;
+            }
           }
         }
 
