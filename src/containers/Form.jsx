@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   formContainer: {
     textAlign: "center",
     marginBottom: 50,
+    backgroundColor: "white",
   },
   box: {
     textAlign: "center",
