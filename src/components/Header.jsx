@@ -2,7 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Logo from "../images/Logo.png";
-import Pin from "../images/PinWhite.png";
+import Pin from "../images/PinWhite.svg";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 100,
   },
   logo: {
-    margin: "10px auto",
+    margin: "20px auto",
   },
   pin: {
     position: "absolute",
@@ -23,14 +23,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xs")]: {
       width: 20,
       height: 20,
-      top: 25,
+      top: 30,
       right: 30,
     },
     [theme.breakpoints.up("sm")]: {
-      width: 30,
-      height: 30,
-      top: 20,
-      right: 40,
+      width: 25,
+      height: 25,
+      top: 30,
+      right: 50,
     },
   },
 }));

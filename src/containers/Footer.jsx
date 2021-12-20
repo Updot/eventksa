@@ -1,13 +1,46 @@
 import React, { useState } from "react";
-import { Grid, FormControl, Button, Select, MenuItem } from "@mui/material";
+import {
+  SvgIcon,
+  Grid,
+  FormControl,
+  Button,
+  Select,
+  MenuItem,
+} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import facebook from "../images/facebook.png";
 import instagram from "../images/instagram.png";
 import website from "../images/website.png";
-import pinOrange from "../images/PinOrange.png";
+import pinOrange from "../images/PinOrange.svg";
 
 const useStyles = makeStyles((theme) => ({}));
+
+function DownIcon(props) {
+  return (
+    <SvgIcon
+      style={{
+        // border: "1px solid red",
+        position: "absolute",
+        top: 19,
+        right: 10,
+        width: 15,
+        height: 10,
+      }}
+      {...props}
+    >
+      <svg fill="none" viewBox="0.37 0.37 9.27 5.25">
+        <path
+          d="M1 1L5 5L9 1"
+          stroke="white"
+          stroke-width="0.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+    </SvgIcon>
+  );
+}
 
 function Footer() {
   const [language, setLanguage] = useState("English");
@@ -60,10 +93,11 @@ function Footer() {
               label="Language"
               defaultValue="English"
               onChange={handleChange}
+              IconComponent={DownIcon}
               className="select-field"
-              style={{ color: "white" }}
+              style={{ color: "white", fontSize: 10 }}
             >
-              <MenuItem value={"English"}>English</MenuItem>
+              <MenuItem value={"English"}>ENGLISH</MenuItem>
               <MenuItem value={"Arabic"}>عربى</MenuItem>
             </Select>
           </FormControl>

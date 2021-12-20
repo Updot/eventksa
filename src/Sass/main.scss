@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -27,6 +27,7 @@ footer.footer {
 
     .item {
       padding: 70px;
+      border: 1px solid #202d5c;
 
       @media (max-width: $small-screen) {
         padding: 50px;
@@ -34,9 +35,9 @@ footer.footer {
 
       p.follow-text {
         font-family: Lateef, serif;
-        font-size: 1.5rem;
+        font-size: 18px;
         color: $orange-main;
-        transform: translateX(-5px);
+        transform: translateX(-10px);
       }
 
       .social-icons {
@@ -49,7 +50,7 @@ footer.footer {
         img {
           max-width: 40px;
           max-height: 40px;
-          margin-top: 50px;
+          margin-top: 25px;
 
           @media (max-width: $small-screen) {
             max-width: 25px;
@@ -79,14 +80,14 @@ footer.footer {
         }
 
         .rect {
-          width: 30px;
-          height: 40px;
-          border: 2px solid $orange-main;
-          border-radius: 10px;
+          width: 33px;
+          height: 55px;
+          border: 1px solid $orange-main;
+          border-radius: 5px;
 
           @media (max-width: $small-screen) {
-            width: 20px;
-            height: 30px;
+            width: 21px;
+            height: 35px;
             border-radius: 5px;
           }
         }
@@ -102,17 +103,19 @@ footer.footer {
 
           p {
             font-family: $font-lateef;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            line-height: 10px;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 20px;
+            opacity: 0.54;
 
             @media (max-width: $small-screen) {
               font-size: 1rem;
+              line-height: 10px;
             }
           }
           h2 {
             font-family: $font-alef;
-            font-size: 1.2rem;
+            font-size: 18px;
             font-weight: 200;
 
             @media (max-width: $small-screen) {

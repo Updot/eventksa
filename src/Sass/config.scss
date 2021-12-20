@@ -17,6 +17,10 @@ $font-alef: Alef, sans-serif;
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
