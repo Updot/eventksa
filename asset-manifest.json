@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/eventksa/static/css/main.84ee5789.css",
-    "main.js": "/eventksa/static/js/main.4c898978.js",
+    "main.css": "/eventksa/static/css/main.491b6cb4.css",
+    "main.js": "/eventksa/static/js/main.af8d3b15.js",
     "index.html": "/eventksa/index.html",
-    "main.84ee5789.css.map": "/eventksa/static/css/main.84ee5789.css.map",
-    "main.4c898978.js.map": "/eventksa/static/js/main.4c898978.js.map"
+    "main.491b6cb4.css.map": "/eventksa/static/css/main.491b6cb4.css.map",
+    "main.af8d3b15.js.map": "/eventksa/static/js/main.af8d3b15.js.map"
   },
   "entrypoints": [
-    "static/css/main.84ee5789.css",
-    "static/js/main.4c898978.js"
+    "static/css/main.491b6cb4.css",
+    "static/js/main.af8d3b15.js"
   ]
 }
