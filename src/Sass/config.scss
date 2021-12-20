@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Lateef&family=Roboto:wght@100;300;400;500&display=swap");
 
-$light-grey: #fafafa;
+$grey-light: #fafafa;
+$primary-main: #132c70;
+$primary-dark: #0c1b54;
+$primary-darker: #0a1644;
+$orange-main: #f3c8a6;
+
+$small-screen: 600px;
+
+$font-lateef: Lateef, serif;
+$font-alef: Alef, sans-serif;
 
 * {
   margin: 0;

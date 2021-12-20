@@ -6,17 +6,18 @@ import Pin from "../images/PinWhite.png";
 
 const useStyles = makeStyles((theme) => ({
   header: {
-    position: "fixed",
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     backgroundColor: "#000000aa",
+    zIndex: 100,
   },
   logo: {
     margin: "10px auto",
   },
   pin: {
-    position: "fixed",
+    position: "absolute",
     cursor: "pointer",
 
     [theme.breakpoints.up("xs")]: {

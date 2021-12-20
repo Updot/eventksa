@@ -13,6 +13,7 @@ import Title from "../components/Title";
 const useStyles = makeStyles((theme) => ({
   formContainer: {
     textAlign: "center",
+    marginBottom: 50,
   },
   box: {
     textAlign: "center",
