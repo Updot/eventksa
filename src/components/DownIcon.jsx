@@ -17,9 +17,9 @@ function DownIcon(props) {
         <path
           d="M1 1L5 5L9 1"
           stroke="white"
-          stroke-width="0.75"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="0.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
       </svg>
     </SvgIcon>

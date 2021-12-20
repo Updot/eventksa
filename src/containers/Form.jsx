@@ -12,16 +12,18 @@ import Title from "../components/Title";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
-    textAlign: "center",
-    marginBottom: 50,
     backgroundColor: "white",
+    margin: "0 auto 50px auto",
+    padding: "30px 0 100px 0",
+    textAlign: "center",
+    width: "90%",
   },
   box: {
     textAlign: "center",
   },
   form: {
     margin: "50px auto",
-    width: "70% !important",
+    width: "90% !important",
     alignItems: "center",
     justifyContent: "space-between",
   },

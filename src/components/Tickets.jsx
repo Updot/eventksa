@@ -4,9 +4,13 @@ import { makeStyles } from "@mui/styles";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   field: {
     width: "40%",
+    backgroundColor: theme.palette.grey.light,
+    border: "none !important",
+    borderRadius: 5,
+    boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
   },
 }));
 

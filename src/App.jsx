@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Collapse } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Landing from "./containers/Landing";
+import Video from "./containers/Video";
 import Form from "./containers/Form";
 import Footer from "./containers/Footer";
 
@@ -25,10 +27,24 @@ function App() {
       fontFamily: "Alef, sans-serif",
     },
   });
+
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <ThemeProvider theme={theme}>
       <Landing />
-      <Form />
+      <Button
+        onClick={() => {
+          setIsFormOpen((prev) => !prev);
+        }}
+        variant="contained"
+      >
+        toggle
+      </Button>
+      <Video />
+      <Collapse in={isFormOpen}>
+        <Form />
+      </Collapse>
       <Footer />
     </ThemeProvider>
   );

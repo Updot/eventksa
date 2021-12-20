@@ -10,10 +10,17 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   box: {
     width: "100%",
     margin: "5px 0 !important",
+  },
+  field: {
+    backgroundColor: theme.palette.grey.light,
+    border: "none !important",
+    borderRadius: 5,
+    boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
+    textAlign: "left",
   },
 }));
 
@@ -32,7 +39,7 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
           <Select
             value={value}
             onChange={handleChange}
-            style={{ textAlign: "left" }}
+            className={classes.field}
           >
             <MenuItem value={"Al-Bahah Province"}>Al-Bahah Province</MenuItem>
             <MenuItem value={"Al-Jawf Province"}>Al-Jawf Province</MenuItem>
