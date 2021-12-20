@@ -15,7 +15,29 @@
   height: 100vh;
 }
 
+.intro-container {
+  background-color: white;
+  width: 90% !important;
+  margin: 60px auto 0 auto;
+  padding: 50px;
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 90%;
+
+    p {
+      color: $primary-main;
+      margin-right: 50px;
+    }
+  }
+}
+
 footer.footer {
+  margin-top: 75px;
+
   .upper-footer {
     background-color: $primary-dark;
     color: white;

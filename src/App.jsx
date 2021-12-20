@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Collapse } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Landing from "./containers/Landing";
-import Video from "./containers/Video";
+import Intro from "./containers/Intro";
 import Form from "./containers/Form";
 import Footer from "./containers/Footer";
 
@@ -33,15 +33,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Landing />
-      <Button
-        onClick={() => {
-          setIsFormOpen((prev) => !prev);
-        }}
-        variant="contained"
-      >
-        toggle
-      </Button>
-      <Video />
+      <Intro setIsFormOpen={setIsFormOpen} />
       <Collapse in={isFormOpen}>
         <Form />
       </Collapse>
