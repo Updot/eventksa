@@ -1,51 +1,14 @@
 import React, { useState } from "react";
-import {
-  SvgIcon,
-  Grid,
-  FormControl,
-  Button,
-  Select,
-  MenuItem,
-} from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { Grid, FormControl, Button, Select, MenuItem } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import DownIcon from "../components/DownIcon";
 import facebook from "../images/facebook.png";
 import instagram from "../images/instagram.png";
 import website from "../images/website.png";
 import pinOrange from "../images/PinOrange.svg";
 
-const useStyles = makeStyles((theme) => ({}));
-
-function DownIcon(props) {
-  return (
-    <SvgIcon
-      style={{
-        // border: "1px solid red",
-        position: "absolute",
-        top: 19,
-        right: 10,
-        width: 15,
-        height: 10,
-      }}
-      {...props}
-    >
-      <svg fill="none" viewBox="0.37 0.37 9.27 5.25">
-        <path
-          d="M1 1L5 5L9 1"
-          stroke="white"
-          stroke-width="0.75"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></path>
-      </svg>
-    </SvgIcon>
-  );
-}
-
 function Footer() {
   const [language, setLanguage] = useState("English");
-
-  const classes = useStyles();
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
@@ -74,7 +37,7 @@ function Footer() {
         </Grid>
         <Grid className="item" item xs={6}>
           <div className="link-container">
-            <div className={`rect ${classes.rect}`} />
+            <div className="rect" />
             <div className="link-text-container">
               <p>Contact</p>
               <h2>US</h2>
@@ -99,7 +62,9 @@ function Footer() {
               label="Language"
               defaultValue="English"
               onChange={handleChange}
-              IconComponent={DownIcon}
+              IconComponent={() => {
+                return <DownIcon top={19} right={10} width={15} height={10} />;
+              }}
               className="select-field"
               style={{ color: "white", fontSize: 10 }}
             >
