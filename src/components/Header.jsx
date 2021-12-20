@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     left: 0,
     right: 0,
-    backgroundColor: "#000000aa",
+    backgroundColor: "#ffffff0a",
     zIndex: 100,
   },
   logo: {

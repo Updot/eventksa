@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 function Landing() {
   return (
-    <div>
+    <div className="landing-page">
       <Header />
     </div>
   );

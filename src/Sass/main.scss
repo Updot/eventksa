@@ -10,6 +10,15 @@
   }
 }
 
+.landing-page {
+  background-image: url(../images/Landing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 99vw;
+  height: 100vh;
+}
+
 footer.footer {
   .upper-footer {
     background-color: $primary-dark;
