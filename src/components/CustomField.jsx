@@ -42,7 +42,6 @@ function CustomField({
         value={value}
         onChange={handleInputChange}
         error={!!error}
-        // {...(error && { error: true, helperText: error })}
       />
       {error && <div className={classes.error}>This field is required</div>}
     </Grid>

@@ -10,6 +10,7 @@ function DownIcon(props) {
         right: props.right,
         width: props.width,
         height: props.height,
+        transition: "all 0.5s ease !important",
       }}
       {...props}
     >

@@ -183,7 +183,7 @@ function Form() {
               value={data.province}
               setProvince={setProvince}
               error={errors.province}
-              sm={5}
+              sm={4}
             />
             <CustomField
               value={data.phone}
@@ -192,7 +192,7 @@ function Form() {
               name="phone"
               handleInputChange={handleInputChange}
               error={errors.phone}
-              sm={3}
+              sm={4}
             />
             <CustomField
               value={data.email}
