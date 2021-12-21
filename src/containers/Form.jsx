@@ -108,6 +108,7 @@ function Form() {
 
   const clearFields = () => {
     setData(initValues);
+    setTitle(null);
   };
 
   useEffect(() => {
