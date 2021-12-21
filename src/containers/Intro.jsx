@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Button, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import DownIcon from "../components/DownIcon";
-import image from "../images/Landing.png";
+import video from "../videos/video_1920x1080.mp4";
+import playButton from "../images/playButton.svg";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -16,10 +17,30 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "36px !important",
     },
   },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "#00000044",
+    cursor: "pointer",
+    zIndex: 10,
+  },
+  playButton: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  },
 }));
 
 function Intro({ isFormOpen, setIsFormOpen }) {
+  const [overlay, setOverlay] = useState(true);
+
   const classes = useStyles();
+
+  const v = useRef(null);
 
   return (
     <Grid
@@ -63,8 +84,36 @@ function Intro({ isFormOpen, setIsFormOpen }) {
           </Button>
         </div>
       </Grid>
-      <Grid id="right-content" item sm={12} md={5}>
-        <img style={{ width: "100%", height: "100%" }} src={image} alt="lol" />
+      <Grid
+        id="right-content"
+        item
+        sm={12}
+        md={5}
+        style={{ position: "relative" }}
+      >
+        <video
+          onClick={() => {
+            setOverlay(true);
+            v.current.pause();
+          }}
+          onEnded={() => setOverlay(true)}
+          width="100%"
+          height="100%"
+          ref={v}
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+        {overlay && (
+          <div
+            onClick={() => {
+              setOverlay(false);
+              v.current.play();
+            }}
+            className={classes.overlay}
+          >
+            <img src={playButton} className={classes.playButton} alt="play" />
+          </div>
+        )}
       </Grid>
     </Grid>
   );
