@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/eventksa/static/css/main.29df0736.css",
-    "main.js": "/eventksa/static/js/main.75b9253c.js",
-    "static/js/688.84ea110c.chunk.js": "/eventksa/static/js/688.84ea110c.chunk.js",
-    "static/js/69.11976203.chunk.js": "/eventksa/static/js/69.11976203.chunk.js",
-    "static/js/966.5b96f7a4.chunk.js": "/eventksa/static/js/966.5b96f7a4.chunk.js",
-    "static/js/154.4c8360cc.chunk.js": "/eventksa/static/js/154.4c8360cc.chunk.js",
-    "static/media/video_1080x1350.mp4": "/eventksa/static/media/video_1080x1350.9d48a0e2ad2f99af8f09.mp4",
-    "static/media/video_1080x1920.mp4": "/eventksa/static/media/video_1080x1920.e701fa59cbc91e813fed.mp4",
-    "static/media/video_1920x1080.mp4": "/eventksa/static/media/video_1920x1080.78d3ff777d22d0c806be.mp4",
-    "static/media/video_1080x1080.mp4": "/eventksa/static/media/video_1080x1080.3e140ee3c7467b905135.mp4",
+    "main.js": "/eventksa/static/js/main.9ec8f050.js",
+    "static/js/688.e42e6e79.chunk.js": "/eventksa/static/js/688.e42e6e79.chunk.js",
+    "static/js/69.a8ca8e1d.chunk.js": "/eventksa/static/js/69.a8ca8e1d.chunk.js",
+    "static/js/966.d344edc7.chunk.js": "/eventksa/static/js/966.d344edc7.chunk.js",
+    "static/js/154.3301dd8b.chunk.js": "/eventksa/static/js/154.3301dd8b.chunk.js",
+    "static/media/video_1920x1080.mp4": "/eventksa/static/media/video_1920x1080.39569f651a3d4f306d27.mp4",
+    "static/media/video_1080x1920.mp4": "/eventksa/static/media/video_1080x1920.0cf6e2e96098305a3e75.mp4",
+    "static/media/video_1080x1350.mp4": "/eventksa/static/media/video_1080x1350.e83ce5201aefbebd22da.mp4",
+    "static/media/video_1080x1080.mp4": "/eventksa/static/media/video_1080x1080.a96337f94d71c84f23aa.mp4",
     "static/media/Landing.png": "/eventksa/static/media/Landing.7814f31803edceadfc99.png",
     "static/media/AgaramondPro-Regular.otf": "/eventksa/static/media/AgaramondPro-Regular.61bf108adb8e2d06ff00.otf",
     "index.html": "/eventksa/index.html",
@@ -17,10 +17,10 @@
     "static/media/PinOrange.svg": "/eventksa/static/media/PinOrange.938eb667e37e768c92332cdb5b615f2d.svg",
     "static/media/playButton.svg": "/eventksa/static/media/playButton.90f71aaac5ebfc062aa3c6a591f07c1e.svg",
     "main.29df0736.css.map": "/eventksa/static/css/main.29df0736.css.map",
-    "main.75b9253c.js.map": "/eventksa/static/js/main.75b9253c.js.map"
+    "main.9ec8f050.js.map": "/eventksa/static/js/main.9ec8f050.js.map"
   },
   "entrypoints": [
     "static/css/main.29df0736.css",
-    "static/js/main.75b9253c.js"
+    "static/js/main.9ec8f050.js"
   ]
 }
