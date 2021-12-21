@@ -45,10 +45,15 @@ function Intro({ isFormOpen, setIsFormOpen }) {
             }}
           >
             <Grid container alignItems="center" justifyContent="space-around">
-              <Grid item xs={8} style={{ textAlign: "left", paddingLeft: 20 }}>
+              <Grid
+                item
+                xs={10}
+                sm={8}
+                style={{ textAlign: "left", paddingLeft: 20 }}
+              >
                 Book Your Visit!
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={2} sm={4}>
                 <DownIcon
                   style={{
                     width: 15,

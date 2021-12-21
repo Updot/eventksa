@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   form: {
-    margin: "50px auto",
+    margin: "auto",
     width: "90% !important",
     alignItems: "center",
     justifyContent: "space-between",
