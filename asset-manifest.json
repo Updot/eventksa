@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eventksa/static/css/main.4a7b0ef4.css",
-    "main.js": "/eventksa/static/js/main.79d5ba13.js",
+    "main.js": "/eventksa/static/js/main.878c2597.js",
     "static/media/video_1920x1080.mp4": "/eventksa/static/media/video_1920x1080.78d3ff777d22d0c806be.mp4",
     "static/media/Landing.png": "/eventksa/static/media/Landing.7814f31803edceadfc99.png",
     "static/media/AgaramondPro-Regular.otf": "/eventksa/static/media/AgaramondPro-Regular.61bf108adb8e2d06ff00.otf",
@@ -10,10 +10,10 @@
     "static/media/PinOrange.svg": "/eventksa/static/media/PinOrange.938eb667e37e768c92332cdb5b615f2d.svg",
     "static/media/playButton.svg": "/eventksa/static/media/playButton.90f71aaac5ebfc062aa3c6a591f07c1e.svg",
     "main.4a7b0ef4.css.map": "/eventksa/static/css/main.4a7b0ef4.css.map",
-    "main.79d5ba13.js.map": "/eventksa/static/js/main.79d5ba13.js.map"
+    "main.878c2597.js.map": "/eventksa/static/js/main.878c2597.js.map"
   },
   "entrypoints": [
     "static/css/main.4a7b0ef4.css",
-    "static/js/main.79d5ba13.js"
+    "static/js/main.878c2597.js"
   ]
 }
