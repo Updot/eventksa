@@ -9,6 +9,7 @@ import CustomSelect from "../components/CustomSelect";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import Title from "../components/Title";
+import Safe from "../components/Safe";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -203,6 +204,7 @@ function Form() {
               error={errors.email}
               sm={4}
             />
+            <Safe />
             <Calendar value={data.date} setDate={setDate} error={errors.date} />
             <Tickets value={data.tickets} setTickets={setTickets} />
           </Grid>
