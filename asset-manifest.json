@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/eventksa/static/css/main.ba5fd231.css",
-    "main.js": "/eventksa/static/js/main.f8e00221.js",
+    "main.css": "/eventksa/static/css/main.4a7b0ef4.css",
+    "main.js": "/eventksa/static/js/main.7b1c766e.js",
     "static/media/Landing.png": "/eventksa/static/media/Landing.7814f31803edceadfc99.png",
+    "static/media/AgaramondPro-Regular.otf": "/eventksa/static/media/AgaramondPro-Regular.61bf108adb8e2d06ff00.otf",
     "index.html": "/eventksa/index.html",
     "static/media/PinWhite.svg": "/eventksa/static/media/PinWhite.1adbf77d7fb6ebffebace0ee2c0e05f4.svg",
     "static/media/PinOrange.svg": "/eventksa/static/media/PinOrange.938eb667e37e768c92332cdb5b615f2d.svg",
-    "main.ba5fd231.css.map": "/eventksa/static/css/main.ba5fd231.css.map",
-    "main.f8e00221.js.map": "/eventksa/static/js/main.f8e00221.js.map"
+    "main.4a7b0ef4.css.map": "/eventksa/static/css/main.4a7b0ef4.css.map",
+    "main.7b1c766e.js.map": "/eventksa/static/js/main.7b1c766e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba5fd231.css",
-    "static/js/main.f8e00221.js"
+    "static/css/main.4a7b0ef4.css",
+    "static/js/main.7b1c766e.js"
   ]
 }
