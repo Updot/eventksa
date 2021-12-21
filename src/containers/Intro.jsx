@@ -6,14 +6,15 @@ import image from "../images/Landing.png";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    fontSize: "1.2rem !important",
+    fontSize: "20px !important",
+    fontFamily: "Agaramond, serif !important",
     textTransform: "capitalize !important",
     width: "100%",
     borderRadius: "0 !important",
 
-    // [theme.breakpoints.up("md")]: {
-    //   height: 75,
-    // },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "36px !important",
+    },
   },
 }));
 
@@ -45,20 +46,15 @@ function Intro({ isFormOpen, setIsFormOpen }) {
             }}
           >
             <Grid container alignItems="center" justifyContent="space-around">
-              <Grid
-                item
-                xs={10}
-                sm={8}
-                style={{ textAlign: "left", paddingLeft: 20 }}
-              >
+              <Grid item xs={10} style={{ textAlign: "left", paddingLeft: 20 }}>
                 Book Your Visit!
               </Grid>
-              <Grid item xs={2} sm={4}>
+              <Grid item xs={2}>
                 <DownIcon
                   style={{
                     width: 15,
                     height: 15,
-                    transition: "all 0.2s ease",
+                    transition: "all 0.5s ease",
                     transform: `rotate(${isFormOpen ? "-180deg" : "0"})`,
                   }}
                 />
