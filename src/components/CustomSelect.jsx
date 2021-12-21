@@ -36,6 +36,7 @@ function CustomButton({ isOpen, setIsOpen }) {
   const classes = useStyles();
   return (
     <Button
+      disableRipple
       elevation={0}
       onClick={() => {
         setIsOpen((prev) => !prev);
@@ -79,7 +80,7 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
           <Select
             value={value}
             onChange={handleChange}
-            className={classes.field}
+            className={`select-field ${classes.field}`}
             style={{ width: "100%", margin: 0 }}
             onOpen={() => setIsOpen(true)}
             onClose={() => setIsOpen(false)}

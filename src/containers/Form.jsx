@@ -147,7 +147,7 @@ function Form() {
   return (
     <>
       {success && <CustomModal setSuccess={setSuccess} />}
-      <div className={`form-container ${classes.formContainer}`}>
+      <div className={classes.formContainer}>
         <Box
           component="form"
           noValidate
