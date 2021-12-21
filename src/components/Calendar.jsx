@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Calendar({ value, setDate, dateError }) {
+function Calendar({ value, setDate, error }) {
   const classes = useStyles();
 
   return (
@@ -32,10 +32,9 @@ function Calendar({ value, setDate, dateError }) {
           minDate={new Date("2022-01-13")}
           maxDate={new Date("2022-01-24")}
           defaultCalendarMonth={new Date("2022-01")}
+          error={!!error}
         />
-        {dateError && (
-          <div className={classes.error}>This field is required</div>
-        )}
+        {error && <div className={classes.error}>{error}</div>}
       </LocalizationProvider>
     </Grid>
   );

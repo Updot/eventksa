@@ -11,6 +11,14 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 5,
     boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
   },
+  error: {
+    textAlign: "left",
+    marginLeft: 15,
+    fontSize: "0.8rem",
+    fontFamily: "Roboto, sans-serif",
+    color: "#D32F2F",
+    marginBottom: 10,
+  },
 }));
 
 function CustomField({
@@ -33,8 +41,10 @@ function CustomField({
         name={name}
         value={value}
         onChange={handleInputChange}
-        {...(error && { error: true, helperText: error })}
+        error={!!error}
+        // {...(error && { error: true, helperText: error })}
       />
+      {error && <div className={classes.error}>This field is required</div>}
     </Grid>
   );
 }

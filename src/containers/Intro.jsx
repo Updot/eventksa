@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "36px !important",
     },
   },
+  downIcon: {},
   videoContainer: {
     position: "relative",
     height: "auto",
@@ -99,11 +100,14 @@ function Intro({ isFormOpen, setIsFormOpen }) {
               <Grid item xs={10} style={{ textAlign: "left", paddingLeft: 20 }}>
                 Book Your Visit
               </Grid>
-              <Grid item xs={2}>
+              <Grid item xs={2} style={{ position: "relative" }}>
                 <DownIcon
                   style={{
+                    position: "absolute",
                     width: 20,
                     height: 20,
+                    top: -10,
+                    left: 0,
                     transition: "all 0.5s ease",
                     transform: `rotate(${isFormOpen ? "-180deg" : "0"})`,
                   }}

@@ -7,8 +7,10 @@ import {
   FormHelperText,
   Select,
   Box,
+  Paper,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import DownIcon from "./DownIcon";
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -36,24 +38,35 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
       <Box className={classes.box}>
         <FormControl fullWidth error={!!error}>
           <InputLabel>Province</InputLabel>
-          <Select
-            value={value}
-            onChange={handleChange}
-            className={classes.field}
-          >
-            <MenuItem value={"Al-Bahah Province"}>Al-Bahah Province</MenuItem>
-            <MenuItem value={"Al-Jawf Province"}>Al-Jawf Province</MenuItem>
-            <MenuItem value={"Aseer Province"}>Aseer Province</MenuItem>
-            <MenuItem value={"Eastern Province"}>Eastern Province</MenuItem>
-            <MenuItem value={"Ha'il Province"}>Ha'il Province</MenuItem>
-            <MenuItem value={"Jizan Province"}>Jizan Province</MenuItem>
-            <MenuItem value={"Madinah Province"}>Madinah Province</MenuItem>
-            <MenuItem value={"Makkah Province"}>Makkah Province</MenuItem>
-            <MenuItem value={"Najran Province"}>Najran Province</MenuItem>
-            <MenuItem value={"Qassim Province"}>Qassim Province</MenuItem>
-            <MenuItem value={"Riyadh Province"}>Riyadh Province</MenuItem>
-            <MenuItem value={"Tabuk Province"}>Tabuk Province</MenuItem>
-          </Select>
+          <Grid container alignItems="stretch">
+            <Grid item xs={10}>
+              <Select
+                value={value}
+                onChange={handleChange}
+                className={classes.field}
+                IconComponent={null}
+                style={{ width: "100%", margin: 0 }}
+              >
+                <MenuItem value={"Al-Bahah Province"}>
+                  Al-Bahah Province
+                </MenuItem>
+                <MenuItem value={"Al-Jawf Province"}>Al-Jawf Province</MenuItem>
+                <MenuItem value={"Aseer Province"}>Aseer Province</MenuItem>
+                <MenuItem value={"Eastern Province"}>Eastern Province</MenuItem>
+                <MenuItem value={"Ha'il Province"}>Ha'il Province</MenuItem>
+                <MenuItem value={"Jizan Province"}>Jizan Province</MenuItem>
+                <MenuItem value={"Madinah Province"}>Madinah Province</MenuItem>
+                <MenuItem value={"Makkah Province"}>Makkah Province</MenuItem>
+                <MenuItem value={"Najran Province"}>Najran Province</MenuItem>
+                <MenuItem value={"Qassim Province"}>Qassim Province</MenuItem>
+                <MenuItem value={"Riyadh Province"}>Riyadh Province</MenuItem>
+                <MenuItem value={"Tabuk Province"}>Tabuk Province</MenuItem>
+              </Select>
+            </Grid>
+            <Grid item xs={2}>
+              <Paper style={{ height: "100%" }}>helooo</Paper>
+            </Grid>
+          </Grid>
           {error && <FormHelperText>{error}</FormHelperText>}
         </FormControl>
       </Box>

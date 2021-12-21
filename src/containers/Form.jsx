@@ -48,10 +48,9 @@ let formData = new FormData();
 
 function Form() {
   const [data, setData] = useState(initValues);
+  const [errors, setErrors] = useState({});
   const [title, setTitle] = useState(null);
   const [date, setDate] = useState(null);
-  const [errors, setErrors] = useState({});
-  const [dateError, setDateError] = useState(false);
   const [province, setProvince] = useState("");
   const [tickets, setTickets] = useState(1);
   const [success, setSuccess] = useState(false);
@@ -98,8 +97,6 @@ function Form() {
     e.preventDefault();
 
     console.log(Array.from(formData));
-    if (data.date === null) setDateError(true);
-    else setDateError(false);
 
     if (validate()) {
       setSuccess(true);
@@ -183,10 +180,10 @@ function Form() {
               sm={12}
             />
             <CustomSelect
-              sm={4}
               value={data.province}
               setProvince={setProvince}
               error={errors.province}
+              sm={5}
             />
             <CustomField
               value={data.phone}
@@ -195,7 +192,7 @@ function Form() {
               name="phone"
               handleInputChange={handleInputChange}
               error={errors.phone}
-              sm={4}
+              sm={3}
             />
             <CustomField
               value={data.email}
@@ -206,11 +203,7 @@ function Form() {
               error={errors.email}
               sm={4}
             />
-            <Calendar
-              value={data.date}
-              setDate={setDate}
-              dateError={dateError}
-            />
+            <Calendar value={data.date} setDate={setDate} error={errors.date} />
             <Tickets value={data.tickets} setTickets={setTickets} />
           </Grid>
           <Grid container className={classes.buttonsContainer}>
