@@ -57,6 +57,27 @@
   }
 }
 
+.form-container {
+  .title-container {
+    color: $grey-dark;
+    font-family: $font-alef;
+
+    span.MuiCheckbox-root {
+      svg {
+        background-color: green;
+        color: $grey-main;
+        box-shadow: inset 0px 0px 0px 4px white;
+        box-sizing: border-box;
+      }
+      &.unchecked {
+        svg {
+          background-color: $grey-main;
+        }
+      }
+    }
+  }
+}
+
 footer.footer {
   margin-top: 75px;
 

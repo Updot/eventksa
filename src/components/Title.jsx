@@ -10,7 +10,11 @@ import {
 function Title({ value, setTitle, error = null }) {
   return (
     <Grid item xs={12} style={{ margin: "0 0 10px 20px", textAlign: "left" }}>
-      <FormControl style={{ display: "contents" }} error={!!error}>
+      <FormControl
+        className="title-container"
+        style={{ display: "contents" }}
+        error={!!error}
+      >
         <FormLabel style={{ marginRight: 20 }}>Title</FormLabel>
         <span>Mr.</span>
         <Checkbox
@@ -19,8 +23,8 @@ function Title({ value, setTitle, error = null }) {
           onChange={() => {
             setTitle(true);
           }}
-          type="checkbox"
           checked={value === true ? true : false}
+          className={value === true ? "checked" : "unchecked"}
         />
         <span>Mrs.</span>
         <Checkbox
@@ -29,8 +33,8 @@ function Title({ value, setTitle, error = null }) {
           onChange={() => {
             setTitle(false);
           }}
-          type="checkbox"
           checked={value === false ? true : false}
+          className={value === false ? "checked" : "unchecked"}
         />
         <FormHelperText>{error}</FormHelperText>
       </FormControl>

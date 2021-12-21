@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Collapse } from "@mui/material";
+import { Collapse } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Landing from "./containers/Landing";
 import Intro from "./containers/Intro";
