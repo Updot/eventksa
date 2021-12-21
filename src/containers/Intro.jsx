@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Intro({ setIsFormOpen }) {
+function Intro({ isFormOpen, setIsFormOpen }) {
   const classes = useStyles();
 
   return (
@@ -49,7 +49,14 @@ function Intro({ setIsFormOpen }) {
                 Book Your Visit!
               </Grid>
               <Grid item xs={3}>
-                <DownIcon top={13} left={0} width={20} height={20} />
+                <DownIcon
+                  style={{
+                    width: 15,
+                    height: 15,
+                    transition: "all 0.2s ease",
+                    transform: `rotate(${isFormOpen ? "-180deg" : "0"})`,
+                  }}
+                />
               </Grid>
             </Grid>
           </Button>

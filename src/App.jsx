@@ -33,7 +33,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Landing />
-      <Intro setIsFormOpen={setIsFormOpen} />
+      <Intro isFormOpen={isFormOpen} setIsFormOpen={setIsFormOpen} />
       <Collapse in={isFormOpen}>
         <Form />
       </Collapse>
