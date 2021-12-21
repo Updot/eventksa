@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { Button, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import DownIcon from "../components/DownIcon";
-// import video from "../videos/video_1920x1080.mp4";
 import playButton from "../images/playButton.svg";
 
 const useStyles = makeStyles((theme) => ({
