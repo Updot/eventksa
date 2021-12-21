@@ -21,16 +21,34 @@
   margin: 60px auto 0 auto;
   padding: 50px;
 
-  .flex-col {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    width: 90%;
+  #left-content {
+    @media (max-width: $sm-screen) {
+      order: 2;
+    }
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      width: 90%;
 
-    p {
-      color: $primary-main;
-      margin-right: 50px;
+      @media (max-width: $sm-screen) {
+        width: 100%;
+      }
+
+      p {
+        color: $primary-main;
+        margin-right: 30px;
+
+        @media (max-width: $sm-screen) {
+          margin: 30px 0;
+        }
+      }
+    }
+  }
+  #right-content {
+    @media (max-width: $sm-screen) {
+      order: 1;
     }
   }
 }
@@ -47,7 +65,7 @@ footer.footer {
       padding: 70px;
       border: 1px solid #202d5c;
 
-      @media (max-width: $small-screen) {
+      @media (max-width: $xs-screen) {
         padding: 50px;
       }
 
@@ -70,14 +88,14 @@ footer.footer {
           img {
             max-width: 40px;
             max-height: 40px;
-            @media (max-width: $small-screen) {
+            @media (max-width: $xs-screen) {
               max-width: 25px;
               max-height: 25px;
             }
           }
         }
 
-        @media (max-width: $small-screen) {
+        @media (max-width: $xs-screen) {
           width: 200px;
         }
       }
@@ -93,7 +111,7 @@ footer.footer {
         img {
           width: 40px;
 
-          @media (max-width: $small-screen) {
+          @media (max-width: $xs-screen) {
             width: 30px;
           }
         }
@@ -104,7 +122,7 @@ footer.footer {
           border: 1px solid $orange-main;
           border-radius: 5px;
 
-          @media (max-width: $small-screen) {
+          @media (max-width: $xs-screen) {
             width: 21px;
             height: 35px;
             border-radius: 5px;
@@ -127,7 +145,7 @@ footer.footer {
             line-height: 20px;
             color: #ffffff8a;
 
-            @media (max-width: $small-screen) {
+            @media (max-width: $xs-screen) {
               font-size: 1rem;
               line-height: 10px;
             }
@@ -137,7 +155,7 @@ footer.footer {
             font-size: 18px;
             font-weight: 200;
 
-            @media (max-width: $small-screen) {
+            @media (max-width: $xs-screen) {
               font-size: 1rem;
             }
           }
