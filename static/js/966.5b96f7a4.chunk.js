@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeventksa=self.webpackChunkeventksa||[]).push([[966],{966:function(e,a,s){e.exports=s.p+"static/media/video_1080x1350.9d48a0e2ad2f99af8f09.mp4"}}]);
