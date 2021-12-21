@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/eventksa/static/css/main.4a7b0ef4.css",
+    "main.css": "/eventksa/static/css/main.29df0736.css",
     "main.js": "/eventksa/static/js/main.75b9253c.js",
     "static/js/688.84ea110c.chunk.js": "/eventksa/static/js/688.84ea110c.chunk.js",
     "static/js/69.11976203.chunk.js": "/eventksa/static/js/69.11976203.chunk.js",
@@ -16,11 +16,11 @@
     "static/media/PinWhite.svg": "/eventksa/static/media/PinWhite.1adbf77d7fb6ebffebace0ee2c0e05f4.svg",
     "static/media/PinOrange.svg": "/eventksa/static/media/PinOrange.938eb667e37e768c92332cdb5b615f2d.svg",
     "static/media/playButton.svg": "/eventksa/static/media/playButton.90f71aaac5ebfc062aa3c6a591f07c1e.svg",
-    "main.4a7b0ef4.css.map": "/eventksa/static/css/main.4a7b0ef4.css.map",
+    "main.29df0736.css.map": "/eventksa/static/css/main.29df0736.css.map",
     "main.75b9253c.js.map": "/eventksa/static/js/main.75b9253c.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a7b0ef4.css",
+    "static/css/main.29df0736.css",
     "static/js/main.75b9253c.js"
   ]
 }
