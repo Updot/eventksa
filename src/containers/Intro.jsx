@@ -16,6 +16,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "36px !important",
     },
   },
+  videoContainer: {
+    position: "relative",
+    height: "auto",
+  },
+  video: {
+    width: "100%",
+    height: "100%",
+  },
   overlay: {
     position: "absolute",
     top: 1,
@@ -36,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Intro({ isFormOpen, setIsFormOpen }) {
   const [video, setVideo] = useState(null);
-  const [overlay, setOverlay] = useState(true);
+  const [overlay, setOverlay] = useState(false);
 
   const classes = useStyles();
 
@@ -94,8 +102,8 @@ function Intro({ isFormOpen, setIsFormOpen }) {
               <Grid item xs={2}>
                 <DownIcon
                   style={{
-                    width: 15,
-                    height: 15,
+                    width: 20,
+                    height: 20,
                     transition: "all 0.5s ease",
                     transform: `rotate(${isFormOpen ? "-180deg" : "0"})`,
                   }}
@@ -110,7 +118,7 @@ function Intro({ isFormOpen, setIsFormOpen }) {
         item
         sm={12}
         md={5}
-        style={{ position: "relative" }}
+        className={classes.videoContainer}
       >
         {video && (
           <video
@@ -119,9 +127,10 @@ function Intro({ isFormOpen, setIsFormOpen }) {
               v.current.pause();
             }}
             onEnded={() => setOverlay(true)}
-            width="100%"
-            height="100%"
+            autoPlay
+            muted
             ref={v}
+            className={classes.video}
           >
             <source src={video} type="video/mp4" />
           </video>

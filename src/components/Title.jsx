@@ -1,12 +1,17 @@
 import React from "react";
-import { Grid, Checkbox, FormControl, FormHelperText } from "@mui/material";
+import {
+  Grid,
+  Checkbox,
+  FormControl,
+  FormLabel,
+  FormHelperText,
+} from "@mui/material";
 
 function Title({ value, setTitle, error = null }) {
-  // console.log(value);
   return (
     <Grid item xs={12} style={{ margin: "0 0 10px 20px", textAlign: "left" }}>
       <FormControl style={{ display: "contents" }} error={!!error}>
-        <label style={{ marginRight: 20 }}>Title</label>
+        <FormLabel style={{ marginRight: 20 }}>Title</FormLabel>
         <span>Mr.</span>
         <Checkbox
           name="mr"
@@ -27,6 +32,7 @@ function Title({ value, setTitle, error = null }) {
           type="checkbox"
           checked={value === false ? true : false}
         />
+        <FormHelperText>{error}</FormHelperText>
       </FormControl>
     </Grid>
   );
