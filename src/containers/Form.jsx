@@ -48,6 +48,7 @@ let formData = new FormData();
 
 function Form() {
   const [data, setData] = useState(initValues);
+  const [title, setTitle] = useState(null);
   const [date, setDate] = useState(null);
   const [errors, setErrors] = useState({});
   const [dateError, setDateError] = useState(false);
@@ -96,12 +97,12 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(Array.from(formData));
     if (data.date === null) setDateError(true);
     else setDateError(false);
 
     if (validate()) {
       setSuccess(true);
-      console.log(Array.from(formData));
     }
   };
 
@@ -119,6 +120,13 @@ function Form() {
       date: date,
     });
   }, [date]);
+
+  useEffect(() => {
+    setData({
+      ...data,
+      mr: title,
+    });
+  }, [title]);
 
   useEffect(() => {
     setData({
@@ -154,11 +162,7 @@ function Form() {
             className={classes.form}
             justifyContent="space-between"
           >
-            <Title
-              value={data.mr}
-              handleInputChange={handleInputChange}
-              error={errors.mr}
-            />
+            <Title value={data.mr} setTitle={setTitle} error={errors.mr} />
             <CustomField
               value={data.firstName}
               label="First name"
