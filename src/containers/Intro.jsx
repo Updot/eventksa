@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Button, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import DownIcon from "../components/DownIcon";
-import video from "../videos/video_1920x1080.mp4";
+// import video from "../videos/video_1920x1080.mp4";
 import playButton from "../images/playButton.svg";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
   },
   overlay: {
     position: "absolute",
-    top: 0,
+    top: 1,
     left: 0,
     right: 0,
-    bottom: 0,
+    bottom: 1,
     backgroundColor: "#00000044",
     cursor: "pointer",
     zIndex: 10,
@@ -36,11 +36,33 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Intro({ isFormOpen, setIsFormOpen }) {
+  const [video, setVideo] = useState(null);
   const [overlay, setOverlay] = useState(true);
 
   const classes = useStyles();
 
   const v = useRef(null);
+
+  const windowWidth = window.screen.width;
+
+  (function (width) {
+    if (width > 1150 && video === null)
+      import("../videos/video_1920x1080.mp4").then((obj) =>
+        setVideo(obj.default)
+      );
+    else if (width > 900 && video === null)
+      import("../videos/video_1080x1080.mp4").then((obj) =>
+        setVideo(obj.default)
+      );
+    else if (width > 600 && video === null)
+      import("../videos/video_1080x1350.mp4").then((obj) =>
+        setVideo(obj.default)
+      );
+    else
+      import("../videos/video_1080x1920.mp4").then((obj) =>
+        setVideo(obj.default)
+      );
+  })(windowWidth);
 
   return (
     <Grid
@@ -68,7 +90,7 @@ function Intro({ isFormOpen, setIsFormOpen }) {
           >
             <Grid container alignItems="center" justifyContent="space-around">
               <Grid item xs={10} style={{ textAlign: "left", paddingLeft: 20 }}>
-                Book Your Visit!
+                Book Your Visit
               </Grid>
               <Grid item xs={2}>
                 <DownIcon
@@ -91,19 +113,21 @@ function Intro({ isFormOpen, setIsFormOpen }) {
         md={5}
         style={{ position: "relative" }}
       >
-        <video
-          onClick={() => {
-            setOverlay(true);
-            v.current.pause();
-          }}
-          onEnded={() => setOverlay(true)}
-          width="100%"
-          height="100%"
-          ref={v}
-        >
-          <source src={video} type="video/mp4" />
-        </video>
-        {overlay && (
+        {video && (
+          <video
+            onClick={() => {
+              setOverlay(true);
+              v.current.pause();
+            }}
+            onEnded={() => setOverlay(true)}
+            width="100%"
+            height="100%"
+            ref={v}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        )}
+        {video && overlay && (
           <div
             onClick={() => {
               setOverlay(false);
