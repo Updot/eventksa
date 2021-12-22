@@ -55,7 +55,7 @@ function Intro({ isFormOpen, setIsFormOpen }) {
 
   (function (width) {
     if (width > 1150 && video === null)
-      import("../videos/video_1920x1080.mp4").then((obj) =>
+      import("../videos/video_2688x1344.mp4").then((obj) =>
         setVideo(obj.default)
       );
     else if (width > 900 && video === null)
