@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Lateef&family=Roboto:wght@100;300;400;500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Inter:wght@200;300;400;500&family=Lateef&family=Roboto:wght@100;300;400;500&display=swap");
 @font-face {
   font-family: Agaramond;
   src: url(../fonts/AgaramondPro-Regular.otf);
@@ -19,6 +18,7 @@ $sm-screen: 900px;
 $font-lateef: Lateef, serif;
 $font-alef: Alef, sans-serif;
 $font-agaramond: Agaramond, serif;
+$font-inter: Inter, sans-serif;
 
 * {
   margin: 0;

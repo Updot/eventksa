@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, TextField } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import { LocalizationProvider, DatePicker } from "@mui/lab";
+import { LocalizationProvider, DatePicker, CalendarPicker } from "@mui/lab";
 
 const useStyles = makeStyles(() => ({
   error: {
@@ -20,10 +20,9 @@ function Calendar({ value, setDate, error }) {
   return (
     <Grid style={{ margin: "20px 0" }} item xs={12} sm={6}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <DatePicker
+        <CalendarPicker
           required
-          label="Choose date"
-          value={value}
+          date={value}
           inputFormat="dd/MM/yyyy"
           onChange={(newValue) => {
             setDate(newValue);

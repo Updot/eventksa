@@ -99,6 +99,21 @@
   }
 }
 
+.MuiCalendarPicker-root {
+  * {
+    font-family: $font-inter !important;
+  }
+
+  button.MuiIconButton-root {
+    display: none;
+  }
+
+  button.MuiPickersDay-root.Mui-selected {
+    border: 5px solid white;
+    border-radius: 10px;
+  }
+}
+
 footer.footer {
   margin-top: 75px;
 
