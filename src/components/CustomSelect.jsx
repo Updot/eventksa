@@ -103,7 +103,13 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
             <MenuItem value={"Riyadh Province"}>Riyadh Province</MenuItem>
             <MenuItem value={"Tabuk Province"}>Tabuk Province</MenuItem>
           </Select>
-          {error && <FormHelperText>{error}</FormHelperText>}
+          {error && (
+            <FormHelperText
+              style={{ fontFamily: "Roboto, sans-serif", fontSize: 13 }}
+            >
+              {error}
+            </FormHelperText>
+          )}
         </FormControl>
       </Box>
     </Grid>

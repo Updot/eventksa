@@ -6,13 +6,120 @@
   }
 }
 
-.landing-page {
-  background-image: url(../images/LandingBG.jpg);
+.landing-component {
+  position: relative;
+  // background-image: url(../images/LandingHorizaontal.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: white;
   width: 100vw;
-  height: 100vh;
+  // height: 130vh;
+
+  img.home-image {
+    width: 100vw;
+    user-select: none;
+
+    @media (max-width: 1070px) {
+      margin-top: 90px;
+    }
+  }
+
+  // @media (max-width: 1070px) {
+  //   background-position: center;
+  // }
+  @media (max-width: 1070px) {
+    // background-image: url(../images/LandingSquare.png);
+  }
+  // @media (max-width: 1050px) {
+  //   background-image: url(../images/LandingBGsquare.jpg);
+  //   background-size: cover;
+  //   background-position: center;
+  // }
+
+  // .text-container {
+  //   position: absolute;
+  //   width: 40vw;
+  //   text-align: center;
+  //   top: 11vw;
+  //   right: 0;
+
+  //   @media (max-width: 1100px) {
+  //     top: 17vw;
+  //   }
+  //   @media (max-width: 1050px) {
+  //     position: initial;
+  //     width: 100vw;
+  //     height: 100vh;
+  //     text-align: center;
+  //   }
+
+  //   .part1 {
+  //     h1.page-title {
+  //       font-family: $font-berlin;
+  //       font-size: 4rem;
+  //       font-weight: 100;
+  //       text-transform: uppercase;
+
+  //       @media (max-width: 1100px) {
+  //         font-size: 3.5rem;
+  //       }
+  //       @media (max-width: 1050px) {
+  //         padding-top: 150px;
+  //       }
+  //     }
+  //     h2.page-subtitle {
+  //       width: 300px;
+  //       margin: 0 auto 20px auto;
+  //       font-family: $font-nobel-book;
+  //       letter-spacing: 1px;
+  //       text-transform: uppercase;
+
+  //       @media (max-width: 1100px) {
+  //         font-size: 1.3rem;
+  //       }
+  //       @media (max-width: 1100px) {
+  //         width: auto;
+  //       }
+  //     }
+  //   }
+  //   .part2 {
+  //     font-family: $font-nobel-light;
+  //     font-size: 1.5rem;
+  //     margin: 50px 0;
+  //     text-transform: uppercase;
+
+  //     @media (max-width: 1100px) {
+  //       font-size: 1.2rem;
+  //     }
+  //     @media (max-width: 1100px) {
+  //       position: absolute;
+  //       font-size: 1.5rem;
+  //       left: 50%;
+  //       bottom: 0;
+  //       width: 100%;
+  //       transform: translate(-50%, -50%);
+  //     }
+  //   }
+  //   img {
+  //     margin-top: 7vh;
+
+  //     @media (max-width: 1100px) {
+  //       position: absolute;
+  //       font-size: 1.5rem;
+  //       left: 50%;
+  //       bottom: 0;
+  //       transform: translate(-50%, -50%);
+  //     }
+  //   }
+  // }
+  // p.hashtag {
+  //   position: absolute;
+  //   font-family: $font-nobel-light;
+  //   text-transform: uppercase;
+  //   bottom: 10px;
+  //   right: 40px;
+  // }
 }
 
 .intro-container {

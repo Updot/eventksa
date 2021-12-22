@@ -3,6 +3,18 @@
   font-family: Agaramond;
   src: url(../fonts/AgaramondPro-Regular.otf);
 }
+@font-face {
+  font-family: Berlin;
+  src: url(../fonts/BerlingskeSerifDisplay-Regular.otf);
+}
+@font-face {
+  font-family: NobelBook;
+  src: url(../fonts/NobelBook.otf);
+}
+@font-face {
+  font-family: NobelLight;
+  src: url(../fonts/nobel-light.ttf);
+}
 
 $grey-light: #fafafa;
 $grey-main: #d4d4d4;
@@ -17,8 +29,11 @@ $sm-screen: 900px;
 
 $font-lateef: Lateef, serif;
 $font-alef: Alef, sans-serif;
-$font-agaramond: Agaramond, serif;
 $font-inter: Inter, sans-serif;
+$font-agaramond: Agaramond, serif;
+$font-berlin: Berlin, sans-serif;
+$font-nobel-book: NobelBook, serif;
+$font-nobel-light: NobelLight, serif;
 
 * {
   margin: 0;
