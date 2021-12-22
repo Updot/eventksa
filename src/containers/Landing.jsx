@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
-import horz from "../images/LandingHorizontal.png";
-import square from "../images/LandingSquare.png";
-import vert from "../images/LandingVertical.png";
 
 // import logo from "../images/Logo.png";
 
-let image;
-
-if (window.screen.width > 1070) image = horz;
-else if (window.screen.width > 400) image = square;
-else image = vert;
-
 function Landing() {
+  const [image, setImage] = useState(null);
+
+  const windowWidth = window.screen.width;
+
+  (function (width) {
+    if (width > 1070 && image === null)
+      import("../images/LandingHorizontal.png").then((obj) =>
+        setImage(obj.default)
+      );
+    else if (width > 450 && image === null)
+      import("../images/LandingSquare.png").then((obj) =>
+        setImage(obj.default)
+      );
+    else if (width < 450 && image === null)
+      import("../images/LandingVertical.png").then((obj) =>
+        setImage(obj.default)
+      );
+  })(windowWidth);
+
   return (
     <div className="landing-component">
       <Header />
