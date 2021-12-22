@@ -10,6 +10,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import Title from "../components/Title";
 import Safe from "../components/Safe";
+import Info from "../components/Info";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -205,7 +206,21 @@ function Form() {
               sm={4}
             />
             <Safe />
-            <Calendar value={data.date} setDate={setDate} error={errors.date} />
+
+            <Grid style={{ margin: "20px 0" }} item xs={12}>
+              <Grid
+                container
+                justifyContent="space-between"
+                alignItems="flex-end"
+              >
+                <Calendar
+                  value={data.date}
+                  setDate={setDate}
+                  error={errors.date}
+                />
+                <Info value={data.date} />
+              </Grid>
+            </Grid>
             <Tickets value={data.tickets} setTickets={setTickets} />
           </Grid>
           <Grid container className={classes.buttonsContainer}>
