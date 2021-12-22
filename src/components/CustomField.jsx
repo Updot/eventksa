@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
   field: {
     margin: "5px 0 !important",
     width: "100%",
+    height: 53,
     backgroundColor: theme.palette.grey.light,
     border: "none !important",
     borderRadius: 5,

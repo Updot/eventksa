@@ -9,7 +9,7 @@ import {
 
 function Title({ value, setTitle, error = null }) {
   return (
-    <Grid item xs={12} style={{ margin: "0 0 10px 20px", textAlign: "left" }}>
+    <Grid item xs={12} style={{ marginLeft: 20, textAlign: "left" }}>
       <FormControl
         className="title-container"
         style={{ display: "contents" }}

@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.8rem",
     fontFamily: "Roboto, sans-serif",
     color: "#D32F2F",
-    marginTop: 5,
-    marginRight: 120,
+    marginRight: 150,
+    transform: "translateY(-20px)",
   },
 }));
 

@@ -8,8 +8,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontFamily: "Alef, sans-serif",
     fontSize: "1.2rem",
+    marginTop: 50,
     marginBottom: 20,
     userSelect: "none",
+
+    [theme.breakpoints.up("sm")]: {
+      marginTop: 0,
+    },
   },
   paper: {
     backgroundColor: theme.palette.grey.light,
@@ -19,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
     letterSpacing: 2,
     fontWeight: 500,
+  },
+  timeContainer: {
+    "@media (min-width: 900px) and (max-width: 1000px)": {
+      fontSize: "0.85rem",
+    },
   },
 }));
 
@@ -92,15 +102,17 @@ function Info({ value }) {
           userSelect: "none",
         }}
       >
-        <AccessTimeIcon
-          style={{ color: "#CACACA", transform: "translateY(5px)" }}
-        />
-        <span style={{ color: "#CACACA", marginLeft: 10 }}>
-          OPENING HOURS -
-        </span>
-        <span style={{ fontWeight: 500, color: "#444", marginLeft: 10 }}>
-          11AM to 10PM
-        </span>
+        <div className={classes.timeContainer}>
+          <AccessTimeIcon
+            style={{ color: "#CACACA", transform: "translateY(5px)" }}
+          />
+          <span style={{ color: "#CACACA", marginLeft: 10 }}>
+            OPENING HOURS -
+          </span>
+          <span style={{ fontWeight: 500, color: "#444", marginLeft: 10 }}>
+            11AM to 10PM
+          </span>
+        </div>
       </Grid>
     </>
   );

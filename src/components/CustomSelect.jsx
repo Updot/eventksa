@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
     border: "none !important",
     borderRadius: 5,
     boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
+    height: 53,
     textAlign: "left",
   },
   arrow: {
     position: "absolute",
-    top: 16,
+    top: 14,
     right: 18,
     transition: "all 0.5s ease !important",
   },
@@ -43,7 +44,7 @@ function CustomButton({ isOpen, setIsOpen }) {
       }}
       style={{
         backgroundColor: "#132C70",
-        height: 56,
+        height: 53,
         minWidth: 60,
         zIndex: 100,
       }}
