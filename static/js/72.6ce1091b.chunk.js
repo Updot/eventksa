@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeventksa=self.webpackChunkeventksa||[]).push([[72],{5072:function(e,a,n){e.exports=n.p+"static/media/LandingSquare.222eafa45bd5ab365721.png"}}]);

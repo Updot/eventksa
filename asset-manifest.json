@@ -1,18 +1,21 @@
 {
   "files": {
     "main.css": "/eventksa/static/css/main.e7cf5e3d.css",
-    "main.js": "/eventksa/static/js/main.7eccfbb6.js",
+    "main.js": "/eventksa/static/js/main.b1a6b165.js",
+    "static/js/630.8c891ad3.chunk.js": "/eventksa/static/js/630.8c891ad3.chunk.js",
+    "static/js/72.6ce1091b.chunk.js": "/eventksa/static/js/72.6ce1091b.chunk.js",
+    "static/js/959.450b16ae.chunk.js": "/eventksa/static/js/959.450b16ae.chunk.js",
     "static/js/735.566467ef.chunk.js": "/eventksa/static/js/735.566467ef.chunk.js",
     "static/js/69.a8ca8e1d.chunk.js": "/eventksa/static/js/69.a8ca8e1d.chunk.js",
     "static/js/966.d344edc7.chunk.js": "/eventksa/static/js/966.d344edc7.chunk.js",
     "static/js/154.3301dd8b.chunk.js": "/eventksa/static/js/154.3301dd8b.chunk.js",
     "static/media/video_2688x1344.mp4": "/eventksa/static/media/video_2688x1344.615be4ad0e149dcf9e89.mp4",
-    "static/media/LandingSquare.png": "/eventksa/static/media/LandingSquare.e97a7f1f58b999754126.png",
     "static/media/video_1080x1920.mp4": "/eventksa/static/media/video_1080x1920.0cf6e2e96098305a3e75.mp4",
+    "static/media/LandingSquare.png": "/eventksa/static/media/LandingSquare.222eafa45bd5ab365721.png",
     "static/media/video_1080x1350.mp4": "/eventksa/static/media/video_1080x1350.e83ce5201aefbebd22da.mp4",
     "static/media/video_1080x1080.mp4": "/eventksa/static/media/video_1080x1080.a96337f94d71c84f23aa.mp4",
-    "static/media/LandingHorizontal.png": "/eventksa/static/media/LandingHorizontal.443e06b728b653a76a2e.png",
-    "static/media/LandingVertical.png": "/eventksa/static/media/LandingVertical.7fe21015d85e369aab7b.png",
+    "static/media/LandingHorizontal.png": "/eventksa/static/media/LandingHorizontal.4455fbe4fbec26019cf4.png",
+    "static/media/LandingVertical.png": "/eventksa/static/media/LandingVertical.4e877c54c71a47bdfda4.png",
     "static/media/BerlingskeSerifDisplay-Regular.otf": "/eventksa/static/media/BerlingskeSerifDisplay-Regular.99c385d60da5da0f21ee.otf",
     "static/media/AgaramondPro-Regular.otf": "/eventksa/static/media/AgaramondPro-Regular.61bf108adb8e2d06ff00.otf",
     "static/media/NobelBook.otf": "/eventksa/static/media/NobelBook.74d77aa6039957fa7672.otf",
@@ -23,10 +26,10 @@
     "static/media/PinOrange.svg": "/eventksa/static/media/PinOrange.938eb667e37e768c92332cdb5b615f2d.svg",
     "static/media/playButton.svg": "/eventksa/static/media/playButton.90f71aaac5ebfc062aa3c6a591f07c1e.svg",
     "main.e7cf5e3d.css.map": "/eventksa/static/css/main.e7cf5e3d.css.map",
-    "main.7eccfbb6.js.map": "/eventksa/static/js/main.7eccfbb6.js.map"
+    "main.b1a6b165.js.map": "/eventksa/static/js/main.b1a6b165.js.map"
   },
   "entrypoints": [
     "static/css/main.e7cf5e3d.css",
-    "static/js/main.7eccfbb6.js"
+    "static/js/main.b1a6b165.js"
   ]
 }
