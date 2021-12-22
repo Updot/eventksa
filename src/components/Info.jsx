@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.grey.light,
     fontFamily: "Inter, sans-serif",
-    padding: "20px 0",
+    padding: "15px 0",
     borderRadius: 5,
     boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
     letterSpacing: 2,
@@ -26,7 +26,7 @@ function Info({ value }) {
   const classes = useStyles();
 
   return (
-    <Grid style={{ textAlign: "left" }} item xs={12} md={6}>
+    <>
       <p className={classes.title}>Select date</p>
       <Grid
         style={!!value ? { color: "#132C70" } : { color: "#BDBDBD" }}
@@ -87,7 +87,7 @@ function Info({ value }) {
         item
         xs={12}
         style={{
-          marginTop: 50,
+          marginTop: 30,
           fontFamily: "Inter, sans-serif",
           userSelect: "none",
         }}
@@ -102,7 +102,7 @@ function Info({ value }) {
           11AM to 10PM
         </span>
       </Grid>
-    </Grid>
+    </>
   );
 }
 

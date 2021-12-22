@@ -29,9 +29,16 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  rightContainer: {
+    textAlign: "left",
+
+    [theme.breakpoints.up("md")]: {
+      paddingRight: 100,
+    },
+  },
   buttonsContainer: {
-    maxWidth: 300,
-    margin: "auto",
+    margin: "50px 0",
+    justifyContent: "space-between",
   },
 }));
 
@@ -207,6 +214,8 @@ function Form() {
             />
             <Safe />
 
+            <Tickets value={data.tickets} setTickets={setTickets} />
+
             <Grid style={{ margin: "20px 0" }} item xs={12}>
               <Grid
                 container
@@ -218,32 +227,39 @@ function Form() {
                   setDate={setDate}
                   error={errors.date}
                 />
-                <Info value={data.date} />
+                <Grid className={classes.rightContainer} item xs={12} md={6}>
+                  <Info value={data.date} />
+                  <Grid container className={classes.buttonsContainer}>
+                    <Grid item xs={5}>
+                      <Button
+                        startIcon={<CloseIcon />}
+                        disableElevation
+                        variant="contained"
+                        style={{
+                          width: "100%",
+                          backgroundColor: "#D4D4D4",
+                          color: "black",
+                          textTransform: "capitalize",
+                        }}
+                        onClick={clearFields}
+                      >
+                        Discard
+                      </Button>
+                    </Grid>
+                    <Grid item xs={5}>
+                      <Button
+                        startIcon={<CheckIcon />}
+                        disableElevation
+                        style={{ width: "100%", textTransform: "capitalize" }}
+                        variant="contained"
+                        type="submit"
+                      >
+                        Confirm
+                      </Button>
+                    </Grid>
+                  </Grid>
+                </Grid>
               </Grid>
-            </Grid>
-            <Tickets value={data.tickets} setTickets={setTickets} />
-          </Grid>
-          <Grid container className={classes.buttonsContainer}>
-            <Grid item xs={4}>
-              <Button
-                startIcon={<CloseIcon />}
-                disableElevation
-                variant="contained"
-                style={{ backgroundColor: "#D4D4D4", color: "black" }}
-                onClick={clearFields}
-              >
-                Discard
-              </Button>
-            </Grid>
-            <Grid item xs={8}>
-              <Button
-                startIcon={<CheckIcon />}
-                disableElevation
-                variant="contained"
-                type="submit"
-              >
-                Book tickets
-              </Button>
             </Grid>
           </Grid>
         </Box>

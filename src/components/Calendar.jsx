@@ -18,7 +18,7 @@ function Calendar({ value, setDate, error }) {
   const classes = useStyles();
 
   return (
-    <Grid item xs={12} md={5}>
+    <Grid item xs={12} md={5} style={{ transform: "translate(-10px)" }}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <CalendarPicker
           required
