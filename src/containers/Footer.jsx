@@ -63,9 +63,8 @@ function Footer() {
               defaultValue="English"
               onChange={handleChange}
               IconComponent={() => {
-                return <DownIcon top={19} right={10} width={15} height={10} />;
+                return <DownIcon top={19} right={0} width={15} height={10} />;
               }}
-              className="select-field"
               style={{ color: "white", fontSize: 10 }}
             >
               <MenuItem value={"English"}>ENGLISH</MenuItem>
