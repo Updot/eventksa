@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Logo from "../images/Logo.png";
@@ -38,10 +39,15 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
   const classes = useStyles();
 
+  const navigate = useNavigate();
+  console.log(navigate);
+
   return (
     <Grid container className={classes.header}>
       <img className={classes.logo} src={Logo} alt="Chaumet" />
-      <img className={classes.pin} src={Pin} alt="location" />
+      <Link to="/map">
+        <img className={classes.pin} src={Pin} alt="location" />
+      </Link>
     </Grid>
   );
 }

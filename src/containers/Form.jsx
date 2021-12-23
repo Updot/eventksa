@@ -214,7 +214,7 @@ function Form() {
             />
             <Safe />
 
-            <Tickets value={data.tickets} setTickets={setTickets} />
+            {/* <Tickets value={data.tickets} setTickets={setTickets} /> */}
 
             <Grid style={{ margin: "20px 0" }} item xs={12}>
               <Grid

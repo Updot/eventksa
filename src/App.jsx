@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Collapse } from "@mui/material";
+import { Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Landing from "./containers/Landing";
-import Intro from "./containers/Intro";
-import Form from "./containers/Form";
+import Home from "./containers/Home";
 import Footer from "./containers/Footer";
+import Map from "./containers/Map";
+import Header from "./components/Header";
 
 function App() {
   const theme = createTheme({
@@ -32,11 +32,17 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Landing />
-      <Intro isFormOpen={isFormOpen} setIsFormOpen={setIsFormOpen} />
-      <Collapse in={isFormOpen}>
-        <Form />
-      </Collapse>
+      <Header />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <Home isFormOpen={isFormOpen} setIsFormOpen={setIsFormOpen} />
+          }
+        />
+        <Route path="/map" element={<Map />} />
+      </Routes>
       <Footer />
     </ThemeProvider>
   );

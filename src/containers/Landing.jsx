@@ -25,7 +25,7 @@ function Landing() {
 
   return (
     <div className="landing-component">
-      <Header />
+      {/* <Header /> */}
       <img className="home-image" src={image} alt="home" />
       <div
         style={{

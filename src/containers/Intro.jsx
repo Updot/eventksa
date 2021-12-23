@@ -66,7 +66,7 @@ function Intro({ isFormOpen, setIsFormOpen }) {
       import("../videos/video_1080x1350.mp4").then((obj) =>
         setVideo(obj.default)
       );
-    else
+    else if (width < 600 && video === null)
       import("../videos/video_1080x1920.mp4").then((obj) =>
         setVideo(obj.default)
       );
