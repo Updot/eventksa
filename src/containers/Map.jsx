@@ -50,7 +50,7 @@ function Map() {
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.2005078221305!2d46.68434421455496!3d24.685633184136663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03423a5a0c73%3A0xf737561f81ceeb4a!2sking%20Fahad%20National%20Library!5e0!3m2!1sen!2sin!4v1640301709383!5m2!1sen!2sin"
-          style={{ border: 0, width: "100%", height: 500, borderRadius: 20 }}
+          style={{ border: 0, width: "90%", height: 700, borderRadius: 20 }}
           allowfullscreen=""
           loading="lazy"
         ></iframe>
