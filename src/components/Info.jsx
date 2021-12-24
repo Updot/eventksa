@@ -60,7 +60,7 @@ function Info({ value }) {
             DATE
           </p>
         </Grid>
-        <Grid style={{ textAlign: "center" }} item xs={3}>
+        <Grid style={{ textAlign: "center", userSelect: "none" }} item xs={3}>
           <div className={classes.paper}>
             {!!value ? <span>01</span> : <span>00</span>}
           </div>
@@ -76,7 +76,7 @@ function Info({ value }) {
             MONTH
           </p>
         </Grid>
-        <Grid style={{ textAlign: "center" }} item xs={5}>
+        <Grid style={{ textAlign: "center", userSelect: "none" }} item xs={5}>
           <div className={classes.paper}>
             {!!value ? <span>{value.getFullYear()}</span> : <span>0000</span>}
           </div>

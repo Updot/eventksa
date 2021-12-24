@@ -11,6 +11,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Title from "../components/Title";
 import Safe from "../components/Safe";
 import Info from "../components/Info";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -47,10 +48,10 @@ const initValues = {
   firstName: "",
   lastName: "",
   email: "",
-  phone: "",
+  phoneNumber: "",
   province: "",
-  date: null,
-  tickets: 1,
+  pickedDate: "",
+  noOfTickets: 1,
 };
 
 let formData = new FormData();
@@ -59,9 +60,9 @@ function Form() {
   const [data, setData] = useState(initValues);
   const [errors, setErrors] = useState({});
   const [title, setTitle] = useState(null);
-  const [date, setDate] = useState(null);
+  const [pickedDate, setPickedDate] = useState(null);
   const [province, setProvince] = useState("");
-  const [tickets, setTickets] = useState(1);
+  // const [noOfTickets, setNoOfTickets] = useState(1);
   const [success, setSuccess] = useState(false);
 
   const classes = useStyles();
@@ -78,10 +79,10 @@ function Form() {
       )
         ? ""
         : "Invalid email";
-    temp.phone = /^(\+971)?[0-9]{9}$/.test(data.phone)
+    temp.phoneNumber = /^(\+971)?[0-9]{9}$/.test(data.phoneNumber)
       ? ""
       : "Invalid phone number";
-    temp.date = data.date !== null ? "" : "This field is required";
+    temp.pickedDate = data.pickedDate !== "" ? "" : "This field is required";
     temp.province = data.province !== "" ? "" : "This field is required";
 
     setErrors({ ...temp });
@@ -93,7 +94,7 @@ function Form() {
     const { name, value } = e.target;
     let v;
 
-    if (name === "phone") v = value.replace(/ /g, "");
+    if (name === "phoneNumber") v = value.replace(/ /g, "");
     else v = value;
 
     setData({
@@ -108,7 +109,29 @@ function Form() {
     console.log(Array.from(formData));
 
     if (validate()) {
-      setSuccess(true);
+      axios
+        .post("https://updot.in/chaumet/index.php/api/register", formData)
+        .then((res) => {
+          console.log(res.data);
+          if (res.data.success) setSuccess(true);
+        });
+
+      // axios({
+      //   method: "post",
+      //   url: "https://updot.in/chaumet/index.php/api/register",
+      //   data: formData,
+      //   headers: { "Content-Type": "multipart/form-data" },
+      // })
+      //   .then(function (response) {
+      //     //handle success
+      //     console.log(response);
+      //   })
+      //   .catch(function (response) {
+      //     //handle error
+      //     console.log(response);
+      //   });
+
+      // setSuccess(true);
     }
   };
 
@@ -122,11 +145,17 @@ function Form() {
   }, [data]);
 
   useEffect(() => {
-    setData({
-      ...data,
-      date: date,
-    });
-  }, [date]);
+    if (pickedDate === null)
+      setData({
+        ...data,
+        pickedDate: "",
+      });
+    else
+      setData({
+        ...data,
+        pickedDate: `${pickedDate.getFullYear()}-01-${pickedDate.getDate()}`,
+      });
+  }, [pickedDate]);
 
   useEffect(() => {
     setData({
@@ -135,12 +164,12 @@ function Form() {
     });
   }, [title]);
 
-  useEffect(() => {
-    setData({
-      ...data,
-      tickets: tickets,
-    });
-  }, [tickets]);
+  // useEffect(() => {
+  //   setData({
+  //     ...data,
+  //     noOfTickets: noOfTickets,
+  //   });
+  // }, [noOfTickets]);
 
   useEffect(() => {
     setData({
@@ -159,7 +188,7 @@ function Form() {
       <div className={classes.formContainer}>
         <Box
           component="form"
-          noValidate
+          novalidate
           autoComplete="off"
           className={classes.box}
           onSubmit={handleSubmit}
@@ -195,12 +224,12 @@ function Form() {
               sm={4}
             />
             <CustomField
-              value={data.phone}
+              value={data.phoneNumber}
               label="Phone number"
               type="text"
-              name="phone"
+              name="phoneNumber"
               handleInputChange={handleInputChange}
-              error={errors.phone}
+              error={errors.phoneNumber}
               sm={4}
             />
             <CustomField
@@ -214,7 +243,7 @@ function Form() {
             />
             <Safe />
 
-            {/* <Tickets value={data.tickets} setTickets={setTickets} /> */}
+            {/* <Tickets value={data.tickets} setNoOfTickets={setNoOfTickets} /> */}
 
             <Grid style={{ margin: "20px 0" }} item xs={12}>
               <Grid
@@ -223,12 +252,12 @@ function Form() {
                 alignItems="flex-end"
               >
                 <Calendar
-                  value={data.date}
-                  setDate={setDate}
-                  error={errors.date}
+                  value={pickedDate}
+                  setPickedDate={setPickedDate}
+                  error={errors.pickedDate}
                 />
                 <Grid className={classes.rightContainer} item xs={12} md={6}>
-                  <Info value={data.date} />
+                  <Info value={pickedDate} />
                   <Grid container className={classes.buttonsContainer}>
                     <Grid item xs={5}>
                       <Button

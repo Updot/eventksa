@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Calendar({ value, setDate, error }) {
+function Calendar({ value, setPickedDate, error }) {
   const classes = useStyles();
 
   return (
@@ -24,9 +24,7 @@ function Calendar({ value, setDate, error }) {
           required
           date={value}
           inputFormat="dd/MM/yyyy"
-          onChange={(newValue) => {
-            setDate(newValue);
-          }}
+          onChange={(newValue) => setPickedDate(newValue)}
           renderInput={(params) => <TextField {...params} />}
           minDate={new Date("2022-01-13")}
           maxDate={new Date("2022-01-24")}
