@@ -45,7 +45,7 @@ function CustomButton({ isOpen, setIsOpen }) {
         backgroundColor: "#132C70",
         height: 57,
         minWidth: 60,
-        zIndex: 100,
+        zIndex: 10,
       }}
     >
       <DownIcon

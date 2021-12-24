@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "36px !important",
     },
   },
-  downIcon: {},
   videoContainer: {
     position: "relative",
     height: "auto",

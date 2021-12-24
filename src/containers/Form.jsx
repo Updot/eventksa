@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Box, Button } from "@mui/material";
+import { Grid, Box, Button, Alert, AlertTitle } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import CustomField from "../components/CustomField";
 import Calendar from "../components/Calendar";
@@ -56,7 +56,7 @@ const initValues = {
 
 let formData = new FormData();
 
-function Form() {
+function Form({ setFailMessage }) {
   const [data, setData] = useState(initValues);
   const [errors, setErrors] = useState({});
   const [title, setTitle] = useState(null);
@@ -106,32 +106,19 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(Array.from(formData));
-
     if (validate()) {
       axios
         .post("https://updot.in/chaumet/index.php/api/register", formData)
         .then((res) => {
           console.log(res.data);
-          if (res.data.success) setSuccess(true);
+          if (res.data.success) {
+            setSuccess(true);
+          } else setFailMessage(res.data.message);
+        })
+        .catch((error) => {
+          console.log(error);
+          setFailMessage("An error occured");
         });
-
-      // axios({
-      //   method: "post",
-      //   url: "https://updot.in/chaumet/index.php/api/register",
-      //   data: formData,
-      //   headers: { "Content-Type": "multipart/form-data" },
-      // })
-      //   .then(function (response) {
-      //     //handle success
-      //     console.log(response);
-      //   })
-      //   .catch(function (response) {
-      //     //handle error
-      //     console.log(response);
-      //   });
-
-      // setSuccess(true);
     }
   };
 
@@ -181,6 +168,19 @@ function Form() {
   useEffect(() => {
     setData(initValues);
   }, [success]);
+
+  useEffect(() => {
+    if (title === null)
+      setData({
+        ...data,
+        mr: null,
+      });
+    if (pickedDate === null)
+      setData({
+        ...data,
+        pickedDate: "",
+      });
+  }, [title, pickedDate]);
 
   return (
     <>
