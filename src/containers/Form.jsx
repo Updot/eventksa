@@ -129,6 +129,7 @@ function Form({ setFailMessage }) {
 
   useEffect(() => {
     for (let key in data) formData.set(key, data[key]);
+    console.log(data);
   }, [data]);
 
   useEffect(() => {
@@ -168,19 +169,6 @@ function Form({ setFailMessage }) {
   useEffect(() => {
     setData(initValues);
   }, [success]);
-
-  useEffect(() => {
-    if (title === null)
-      setData({
-        ...data,
-        mr: null,
-      });
-    if (pickedDate === null)
-      setData({
-        ...data,
-        pickedDate: "",
-      });
-  }, [title, pickedDate]);
 
   return (
     <>
