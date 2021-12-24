@@ -41,7 +41,9 @@ function Header() {
 
   return (
     <Grid container className={classes.header}>
-      <img className={classes.logo} src={Logo} alt="Chaumet" />
+      <Link to="/" className={classes.logo}>
+        <img src={Logo} alt="Chaumet" />
+      </Link>
       <Link to="/map">
         <img className={classes.pin} src={Pin} alt="location" />
       </Link>
