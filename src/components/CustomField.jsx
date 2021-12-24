@@ -4,12 +4,16 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   field: {
-    margin: "5px 0 !important",
+    margin: "10px 0 !important",
     width: "100%",
     backgroundColor: theme.palette.grey.light,
     border: "none !important",
     borderRadius: 5,
     boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
+
+    [theme.breakpoints.up("sm")]: {
+      margin: "5px 0 !important",
+    },
   },
   error: {
     textAlign: "left",

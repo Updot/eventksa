@@ -8,12 +8,12 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontFamily: "Alef, sans-serif",
     fontSize: "1.2rem",
-    marginTop: 50,
+    marginLeft: 10,
     marginBottom: 20,
     userSelect: "none",
 
-    [theme.breakpoints.up("sm")]: {
-      marginTop: 0,
+    [theme.breakpoints.up("md")]: {
+      marginLeft: 0,
     },
   },
   paper: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
   },
   timeContainer: {
-    "@media (min-width: 900px) and (max-width: 1000px)": {
+    "@media (max-width: 1000px)": {
       fontSize: "0.85rem",
     },
   },

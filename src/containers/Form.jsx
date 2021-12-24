@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Box, Button, Alert, AlertTitle } from "@mui/material";
+import { Grid, Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import CustomField from "../components/CustomField";
 import Calendar from "../components/Calendar";
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   formContainer: {
     backgroundColor: "white",
     margin: "0 auto 50px auto",
-    padding: "30px 0 100px 0",
+    padding: "30px 0 0 0",
     textAlign: "center",
     width: "90%",
   },
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
 
     [theme.breakpoints.up("md")]: {
-      paddingRight: 100,
+      padding: "0 70px 0 30px",
     },
   },
   buttonsContainer: {
@@ -125,6 +125,7 @@ function Form({ setFailMessage }) {
   const clearFields = () => {
     setData(initValues);
     setTitle(null);
+    setPickedDate(null);
   };
 
   useEffect(() => {

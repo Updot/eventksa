@@ -8,7 +8,7 @@ import Form from "./Form";
 const useStyles = makeStyles(() => ({
   alert: {
     position: "fixed",
-    top: "20%",
+    top: "100px",
     left: "50%",
     width: "50%",
     minWidth: 300,
