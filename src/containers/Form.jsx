@@ -110,7 +110,6 @@ function Form({ setFailMessage }) {
       axios
         .post("https://updot.in/chaumet/index.php/api/register", formData)
         .then((res) => {
-          console.log(res.data);
           if (res.data.success) {
             setSuccess(true);
           } else setFailMessage(res.data.message);
