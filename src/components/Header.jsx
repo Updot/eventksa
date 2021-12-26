@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 100,
   },
   logo: {
-    margin: "20px auto",
+    margin: "10px auto",
   },
   pin: {
     position: "absolute",
@@ -42,7 +42,7 @@ function Header() {
   return (
     <Grid container className={classes.header}>
       <Link to="/" className={classes.logo}>
-        <img src={Logo} alt="Chaumet" />
+        <img width="140px" src={Logo} alt="Chaumet" />
       </Link>
       <Link to="/map">
         <img className={classes.pin} src={Pin} alt="location" />
