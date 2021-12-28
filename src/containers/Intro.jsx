@@ -3,6 +3,7 @@ import { Button, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import DownIcon from "../components/DownIcon";
 import playButton from "../images/playButton.svg";
+import video from "../videos/video.mp4";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -43,33 +44,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Intro({ isFormOpen, setIsFormOpen }) {
-  const [video, setVideo] = useState(null);
   const [overlay, setOverlay] = useState(false);
 
   const classes = useStyles();
 
   const v = useRef(null);
-
-  const windowWidth = window.screen.width;
-
-  (function (width) {
-    if (width > 1150 && video === null)
-      import("../videos/video_2688x1344.mp4").then((obj) =>
-        setVideo(obj.default)
-      );
-    else if (width > 900 && video === null)
-      import("../videos/video_1080x1080.mp4").then((obj) =>
-        setVideo(obj.default)
-      );
-    else if (width > 600 && video === null)
-      import("../videos/video_1080x1350.mp4").then((obj) =>
-        setVideo(obj.default)
-      );
-    else if (width < 600 && video === null)
-      import("../videos/video_1080x1920.mp4").then((obj) =>
-        setVideo(obj.default)
-      );
-  })(windowWidth);
 
   return (
     <Grid
