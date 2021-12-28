@@ -129,7 +129,6 @@ function Form({ setFailMessage }) {
 
   useEffect(() => {
     for (let key in data) formData.set(key, data[key]);
-    console.log(data);
   }, [data]);
 
   useEffect(() => {
