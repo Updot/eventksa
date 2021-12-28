@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "0 !important",
 
     [theme.breakpoints.up("sm")]: {
-      fontSize: "36px !important",
+      fontSize: "30px !important",
     },
   },
   videoContainer: {
@@ -84,7 +84,7 @@ function Intro({ isFormOpen, setIsFormOpen }) {
                     position: "absolute",
                     width: 20,
                     height: 20,
-                    top: -10,
+                    top: -12,
                     left: 0,
                     transition: "all 0.5s ease",
                     transform: `rotate(${isFormOpen ? "-180deg" : "0"})`,

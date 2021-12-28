@@ -16,10 +16,6 @@ const useStyles = makeStyles((theme) => ({
   box: {
     width: "100%",
     margin: "10px 0 !important",
-
-    [theme.breakpoints.up("sm")]: {
-      margin: "5px 0 !important",
-    },
   },
   field: {
     backgroundColor: theme.palette.grey.light,
