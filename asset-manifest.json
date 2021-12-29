@@ -1,14 +1,10 @@
 {
   "files": {
-    "main.css": "/eventksa/static/css/main.9fbb31f8.css",
-    "main.js": "/eventksa/static/js/main.64164a74.js",
-    "static/js/630.8c891ad3.chunk.js": "/eventksa/static/js/630.8c891ad3.chunk.js",
-    "static/js/72.6ce1091b.chunk.js": "/eventksa/static/js/72.6ce1091b.chunk.js",
-    "static/js/959.450b16ae.chunk.js": "/eventksa/static/js/959.450b16ae.chunk.js",
+    "main.css": "/eventksa/static/css/main.c837a3b1.css",
+    "main.js": "/eventksa/static/js/main.17ae1077.js",
     "static/media/video.mp4": "/eventksa/static/media/video.615be4ad0e149dcf9e89.mp4",
-    "static/media/LandingSquare.png": "/eventksa/static/media/LandingSquare.222eafa45bd5ab365721.png",
-    "static/media/LandingHorizontal.png": "/eventksa/static/media/LandingHorizontal.4455fbe4fbec26019cf4.png",
-    "static/media/LandingVertical.png": "/eventksa/static/media/LandingVertical.4e877c54c71a47bdfda4.png",
+    "static/media/LandingBGsquare.jpg": "/eventksa/static/media/LandingBGsquare.67c6a32008b86aae1467.jpg",
+    "static/media/LandingBG.jpg": "/eventksa/static/media/LandingBG.d1e0f13e9f2edd42f735.jpg",
     "static/media/BerlingskeSerifDisplay-Regular.otf": "/eventksa/static/media/BerlingskeSerifDisplay-Regular.99c385d60da5da0f21ee.otf",
     "static/media/AgaramondPro-Regular.otf": "/eventksa/static/media/AgaramondPro-Regular.61bf108adb8e2d06ff00.otf",
     "static/media/Logo.png": "/eventksa/static/media/Logo.a63bc30028118351b94a.png",
@@ -19,11 +15,11 @@
     "static/media/PinWhite.svg": "/eventksa/static/media/PinWhite.1adbf77d7fb6ebffebace0ee2c0e05f4.svg",
     "static/media/PinOrange.svg": "/eventksa/static/media/PinOrange.938eb667e37e768c92332cdb5b615f2d.svg",
     "static/media/playButton.svg": "/eventksa/static/media/playButton.90f71aaac5ebfc062aa3c6a591f07c1e.svg",
-    "main.9fbb31f8.css.map": "/eventksa/static/css/main.9fbb31f8.css.map",
-    "main.64164a74.js.map": "/eventksa/static/js/main.64164a74.js.map"
+    "main.c837a3b1.css.map": "/eventksa/static/css/main.c837a3b1.css.map",
+    "main.17ae1077.js.map": "/eventksa/static/js/main.17ae1077.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fbb31f8.css",
-    "static/js/main.64164a74.js"
+    "static/css/main.c837a3b1.css",
+    "static/js/main.17ae1077.js"
   ]
 }
