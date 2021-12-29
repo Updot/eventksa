@@ -55,10 +55,21 @@ const useStyles = makeStyles((theme) => ({
       margin: "40px auto 70px auto",
     },
   },
-  button: {
+  mailButton: {
     // fontFamily: "Alef, sans-serif !important",
+    display: "block !important",
     padding: "5px 30px !important",
     fontSize: "1.1rem !important",
+    width: 150,
+    margin: "auto !important",
+  },
+  storyButton: {
+    display: "block !important",
+    padding: "5px 30px !important",
+    fontSize: "1.5rem !important",
+    width: "85%",
+    marginTop: "50px !important",
+    margin: "auto !important",
   },
 }));
 
@@ -91,10 +102,23 @@ function CustomModal({ setSuccess }) {
             variant="contained"
             disableElevation
             style={{ textTransform: "none" }}
-            className={classes.button}
+            className={classes.mailButton}
           >
             Go to mail
           </Button>
+          <Button
+            href="#"
+            target="_blank"
+            variant="contained"
+            disableElevation
+            style={{ textTransform: "none" }}
+            className={classes.storyButton}
+          >
+            Crown Your Stories
+          </Button>
+          <p style={{ color: "#838383", marginTop: 10 }}>
+            Try or Tiara on Instagram
+          </p>
         </Box>
       </Modal>
     </div>
