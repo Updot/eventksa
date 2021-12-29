@@ -86,7 +86,7 @@ function Form({ setFailMessage }) {
   const [pickedDate, setPickedDate] = useState(null);
   const [province, setProvince] = useState("");
   // const [noOfTickets, setNoOfTickets] = useState(1);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
 
   const classes = useStyles();
 
