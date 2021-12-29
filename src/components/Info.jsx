@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   timeContainer: {
     "@media (max-width: 1000px)": {
-      fontSize: "0.85rem",
+      fontSize: "0.8rem",
     },
   },
 }));

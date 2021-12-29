@@ -11,7 +11,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import Title from "../components/Title";
 import Safe from "../components/Safe";
 import Info from "../components/Info";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
@@ -64,17 +63,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.grey.dark,
     marginBottom: 20,
     padding: "10px 0 10px 5%",
-  },
-  arrowContainer: {
-    position: "absolute",
-    backgroundColor: theme.palette.primary.main,
-    color: "white",
-    width: "20%",
-    minWidth: 100,
-    borderRadius: 5,
-    top: 0,
-    right: 0,
-    bottom: 0,
   },
 }));
 
@@ -270,17 +258,7 @@ function Form({ setFailMessage }) {
             <Grid style={{ margin: "20px 0" }} item xs={12}>
               <div className={classes.calendarContainer}>
                 <div className={classes.calendarHeader}>
-                  <p>View available dates</p>
-                  <div className={classes.arrowContainer}>
-                    <KeyboardArrowDownIcon
-                      style={{
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                      }}
-                    />
-                  </div>
+                  <p>Available dates</p>
                 </div>
                 <Grid
                   container
