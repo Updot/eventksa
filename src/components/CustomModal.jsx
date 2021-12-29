@@ -98,7 +98,8 @@ function CustomModal({ setSuccess }) {
             Thank You!
           </Typography>
           <p className={classes.subtext}>
-            A confirmation letter has been sent to your email. Check your inbox.
+            A confirmation letter has been sent to your email. Please check your
+            inbox.
           </p>
           <Button
             href="https://mail.google.com"
