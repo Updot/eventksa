@@ -24,7 +24,7 @@ function App() {
       },
     },
     typography: {
-      fontFamily: "Alef, sans-serif",
+      fontFamily: "Agaramond, serif",
     },
   });
 

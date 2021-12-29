@@ -104,7 +104,10 @@ function CustomSelect({ value, setProvince, sm, error = null }) {
           </Select>
           {error && (
             <FormHelperText
-              style={{ fontFamily: "Roboto, sans-serif", fontSize: 13 }}
+              style={{
+                // fontFamily: "Roboto, sans-serif",
+                fontSize: 13,
+              }}
             >
               {error}
             </FormHelperText>

@@ -13,11 +13,11 @@ const useStyles = makeStyles(() => ({
     width: 20,
   },
   title: {
-    fontFamily: "Alef, sans-serif",
+    // fontFamily: "Alef, sans-serif",
     fontSize: "1rem",
   },
   text: {
-    fontFamily: "Alef, sans-serif",
+    // fontFamily: "Alef, sans-serif",
     fontSize: "0.8rem",
     color: "#B1B1B1",
   },

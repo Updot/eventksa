@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Inter:wght@200;300;400;500&family=Lateef&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Inter:wght@200;300;400;500&family=Lateef&display=swap");
 @font-face {
   font-family: Agaramond;
   src: url(../fonts/AgaramondPro-Regular.otf);
 }
-@font-face {
-  font-family: Berlin;
-  src: url(../fonts/BerlingskeSerifDisplay-Regular.otf);
-}
-@font-face {
-  font-family: NobelBook;
-  src: url(../fonts/NobelBook.otf);
-}
-@font-face {
-  font-family: NobelLight;
-  src: url(../fonts/nobel-light.ttf);
-}
+// @font-face {
+//   font-family: Berlin;
+//   src: url(../fonts/BerlingskeSerifDisplay-Regular.otf);
+// }
+// @font-face {
+//   font-family: NobelBook;
+//   src: url(../fonts/NobelBook.otf);
+// }
+// @font-face {
+//   font-family: NobelLight;
+//   src: url(../fonts/nobel-light.ttf);
+// }
 
 $grey-light: #fafafa;
 $grey-main: #d4d4d4;
@@ -39,6 +39,8 @@ $font-nobel-light: NobelLight, serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: $font-agaramond;
 }
 
 body {

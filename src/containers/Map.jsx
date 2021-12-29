@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   text: {
-    fontFamily: "Agaramond, serif",
+    // fontFamily: "Agaramond, serif",
     fontSize: "1.2rem",
     textAlign: "center",
     color: "white",

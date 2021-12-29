@@ -51,7 +51,7 @@
 
     .part1 {
       h1.page-title {
-        font-family: $font-berlin;
+        // font-family: $font-berlin;
         font-size: 4rem;
         font-weight: 100;
         text-transform: uppercase;
@@ -72,7 +72,7 @@
       h2.page-subtitle {
         width: 300px;
         margin: 0 auto 20px auto;
-        font-family: $font-nobel-book;
+        // font-family: $font-nobel-book;
         letter-spacing: 1px;
         text-transform: uppercase;
 
@@ -92,7 +92,7 @@
       }
     }
     .part2 {
-      font-family: $font-nobel-light;
+      // font-family: $font-nobel-light;
       font-size: 1.5rem;
       margin: 50px 0;
       text-transform: uppercase;
@@ -101,16 +101,21 @@
         position: absolute;
         font-size: 1.1rem;
         left: 50%;
-        top: 82vw;
+        top: 79vw;
         width: 100%;
         transform: translateX(-50%);
       }
-      @media (max-width: 800px) {
+      @media (max-width: 900px) {
         font-size: 1rem;
-        top: 74vw;
+        top: 77vw;
+      }
+      @media (max-width: 800px) {
+        top: 76vw;
+      }
+      @media (max-width: 800px) {
+        font-size: 0.8rem;
       }
       @media (max-width: 500px) {
-        font-size: 0.8rem;
         top: 73vw;
       }
       @media (max-width: 400px) {
@@ -120,21 +125,33 @@
     }
     img {
       width: 200px;
-      margin-top: 7vh;
+      margin-top: 150px;
 
       @media (max-width: 1100px) {
-        display: none;
+        width: 150px;
         position: absolute;
-        font-size: 1.5rem;
+        top: 75vw;
         left: 50%;
-        bottom: 0;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
+      }
+      @media (max-width: 900px) {
+        top: 71vw;
+      }
+      @media (max-width: 800px) {
+        top: 69vw;
+      }
+      @media (max-width: 700px) {
+        width: 100px;
+        top: 67vw;
+      }
+      @media (max-width: 600px) {
+        display: none;
       }
     }
   }
   p.hashtag {
     position: absolute;
-    font-family: $font-nobel-light;
+    // font-family: $font-nobel-light;
     text-transform: uppercase;
     bottom: 10px;
     right: 40px;
@@ -177,7 +194,7 @@
       p {
         color: $primary-main;
         margin-right: 30px;
-        font-family: $font-agaramond;
+        // font-family: $font-agaramond;
         font-size: 24px;
         line-height: 26px;
 
@@ -197,7 +214,7 @@
 
 .title-container {
   color: $grey-dark;
-  font-family: $font-alef;
+  // font-family: $font-alef;
 
   span.MuiCheckbox-root {
     svg {
@@ -238,9 +255,9 @@
 }
 
 .MuiCalendarPicker-root {
-  * {
-    font-family: $font-inter !important;
-  }
+  // * {
+  // font-family: $font-inter !important;
+  // }
 
   button.MuiIconButton-root {
     display: none;
@@ -269,7 +286,7 @@ footer.footer {
       }
 
       p.follow-text {
-        font-family: Lateef, serif;
+        // font-family: Lateef, serif;
         font-size: 18px;
         color: $orange-main;
       }
@@ -338,7 +355,7 @@ footer.footer {
           margin-top: 10px;
 
           p {
-            font-family: $font-lateef;
+            // font-family: $font-lateef;
             font-size: 19px;
             font-weight: 400;
             line-height: 20px;
@@ -350,7 +367,7 @@ footer.footer {
             }
           }
           h2 {
-            font-family: $font-alef;
+            // font-family: $font-alef;
             font-size: 18px;
             font-weight: 200;
 

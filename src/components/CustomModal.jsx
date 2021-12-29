@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     color: theme.palette.primary.main,
-    fontFamily: "Lateef, serif !important",
+    // fontFamily: "Lateef, serif !important",
     [theme.breakpoints.up("xs")]: {
       marginTop: "20px !important",
     },
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subtext: {
-    fontFamily: "Alef, sans-serif ",
+    // fontFamily: "Alef, sans-serif ",
     color: theme.palette.grey.dark,
     [theme.breakpoints.up("xs")]: {
       width: "70%",
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button: {
-    fontFamily: "Alef, sans-serif !important",
+    // fontFamily: "Alef, sans-serif !important",
     padding: "5px 30px !important",
     fontSize: "1.1rem !important",
   },

@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     boxShadow: "inset 0px -2px 0px rgba(19, 44, 112, 0.25)",
     borderRadius: 5,
-    fontFamily: "Alef, sans-serif",
+    // fontFamily: "Alef, sans-serif",
     color: theme.palette.grey.dark,
     marginBottom: 20,
     padding: "10px 0 10px 5%",

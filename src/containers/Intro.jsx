@@ -8,7 +8,7 @@ import video from "../videos/video.mp4";
 const useStyles = makeStyles((theme) => ({
   button: {
     fontSize: "20px !important",
-    fontFamily: "Agaramond, serif !important",
+    // fontFamily: "Agaramond, serif !important",
     textTransform: "capitalize !important",
     width: "100%",
     borderRadius: "0 !important",
