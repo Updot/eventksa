@@ -65,7 +65,7 @@ function Footer() {
               IconComponent={() => {
                 return <DownIcon top={19} right={0} width={15} height={10} />;
               }}
-              style={{ color: "white", fontSize: 10 }}
+              style={{ color: "white", fontSize: 12 }}
             >
               <MenuItem value={"English"}>ENGLISH</MenuItem>
               <MenuItem value={"Arabic"}>عربى</MenuItem>

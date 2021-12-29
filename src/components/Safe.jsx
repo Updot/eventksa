@@ -14,11 +14,11 @@ const useStyles = makeStyles(() => ({
   },
   title: {
     // fontFamily: "Alef, sans-serif",
-    fontSize: "1rem",
+    fontSize: "1.2rem",
   },
   text: {
     // fontFamily: "Alef, sans-serif",
-    fontSize: "0.8rem",
+    fontSize: "1rem",
     color: "#B1B1B1",
   },
 }));
@@ -37,7 +37,7 @@ function Safe() {
       </Grid>
       <Grid item xs={8} sm={9}>
         <p className={classes.title}>Your Information is Safe</p>
-        <p className={classes.text}>
+        <p className={classes.text} style={{ marginTop: 5 }}>
           We respect your privacy and do not tolerate spam and will never sell,
           rent, lease or give away your information to any third party. Nor will
           we send you unsolicited email.

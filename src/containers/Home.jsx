@@ -36,8 +36,8 @@ function Home({ isFormOpen, setIsFormOpen }) {
     <>
       {!!failMessage && (
         <Alert variant="filled" className={classes.alert} severity="error">
-          <AlertTitle style={{ fontSize: "1.5rem" }}>Sorry</AlertTitle>
-          <p style={{ fontSize: "1.2rem" }}> {failMessage} </p>
+          <AlertTitle style={{ fontSize: "1.7rem" }}>Sorry</AlertTitle>
+          <p style={{ fontSize: "1.4rem" }}> {failMessage} </p>
         </Alert>
       )}
       <Landing />

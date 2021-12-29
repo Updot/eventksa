@@ -6,7 +6,7 @@ import { LocalizationProvider, CalendarPicker } from "@mui/lab";
 
 const useStyles = makeStyles((theme) => ({
   error: {
-    fontSize: "0.8rem",
+    fontSize: "1rem",
     // fontFamily: "Roboto, sans-serif",
     color: "#D32F2F",
     marginRight: 150,

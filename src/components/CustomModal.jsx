@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     color: theme.palette.primary.main,
     // fontFamily: "Lateef, serif !important",
+    fontSize: "1.1rem",
+
     [theme.breakpoints.up("xs")]: {
       marginTop: "20px !important",
     },
@@ -45,7 +47,9 @@ const useStyles = makeStyles((theme) => ({
   },
   subtext: {
     // fontFamily: "Alef, sans-serif ",
+    fontSize: "1.2rem",
     color: theme.palette.grey.dark,
+
     [theme.breakpoints.up("xs")]: {
       width: "70%",
       margin: "30px auto 60px auto",
@@ -59,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     // fontFamily: "Alef, sans-serif !important",
     display: "block !important",
     padding: "5px 30px !important",
-    fontSize: "1.1rem !important",
+    fontSize: "1.2rem !important",
     width: 150,
     margin: "auto !important",
   },
@@ -116,7 +120,7 @@ function CustomModal({ setSuccess }) {
           >
             Crown Your Stories
           </Button>
-          <p style={{ color: "#838383", marginTop: 10 }}>
+          <p style={{ color: "#838383", marginTop: 10, fontSize: "1.1rem" }}>
             Try or Tiara on Instagram
           </p>
         </Box>

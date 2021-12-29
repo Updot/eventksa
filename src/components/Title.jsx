@@ -15,7 +15,9 @@ function Title({ value, setTitle, error = null }) {
         style={{ display: "contents" }}
         error={!!error}
       >
-        <FormLabel style={{ marginRight: 20 }}>Title</FormLabel>
+        <FormLabel style={{ marginRight: 20, fontSize: "1.2rem" }}>
+          Title
+        </FormLabel>
         <span>Mr.</span>
         <Checkbox
           name="mr"

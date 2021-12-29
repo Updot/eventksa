@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: theme.palette.primary.main,
     // fontFamily: "Alef, sans-serif",
-    fontSize: "1.2rem",
+    fontSize: "1.3rem",
     marginLeft: 10,
     marginBottom: 20,
     userSelect: "none",
@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.grey.light,
     // fontFamily: "Inter, sans-serif",
+    fontSize: "1.2rem",
     padding: "15px 0",
     borderRadius: 5,
     boxShadow: " 0px 2px 0px rgba(19, 44, 112, 0.25)",
@@ -51,7 +52,7 @@ function Info({ value }) {
           <p
             style={{
               // fontFamily: "Inter, sans-serif",
-              fontSize: 10,
+              fontSize: 12,
               marginTop: 10,
               color: "#C2C2C2",
               userSelect: "none",
@@ -67,7 +68,7 @@ function Info({ value }) {
           <p
             style={{
               // fontFamily: "Inter, sans-serif",
-              fontSize: 10,
+              fontSize: 12,
               marginTop: 10,
               color: "#C2C2C2",
               userSelect: "none",
@@ -83,7 +84,7 @@ function Info({ value }) {
           <p
             style={{
               // fontFamily: "Inter, sans-serif",
-              fontSize: 10,
+              fontSize: 12,
               marginTop: 10,
               color: "#C2C2C2",
               userSelect: "none",

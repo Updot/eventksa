@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   error: {
     textAlign: "left",
     marginLeft: 15,
-    fontSize: "0.8rem",
+    fontSize: "1rem",
     // fontFamily: "Roboto, sans-serif",
     color: "#D32F2F",
     marginBottom: 10,
