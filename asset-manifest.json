@@ -1,25 +1,23 @@
 {
   "files": {
-    "main.css": "/eventksa/static/css/main.c837a3b1.css",
-    "main.js": "/eventksa/static/js/main.0e8c001c.js",
+    "main.css": "/eventksa/static/css/main.1dab19f3.css",
+    "main.js": "/eventksa/static/js/main.a98ddfd5.js",
     "static/media/video.mp4": "/eventksa/static/media/video.615be4ad0e149dcf9e89.mp4",
     "static/media/LandingBGsquare.jpg": "/eventksa/static/media/LandingBGsquare.67c6a32008b86aae1467.jpg",
     "static/media/LandingBG.jpg": "/eventksa/static/media/LandingBG.d1e0f13e9f2edd42f735.jpg",
-    "static/media/BerlingskeSerifDisplay-Regular.otf": "/eventksa/static/media/BerlingskeSerifDisplay-Regular.99c385d60da5da0f21ee.otf",
     "static/media/AgaramondPro-Regular.otf": "/eventksa/static/media/AgaramondPro-Regular.61bf108adb8e2d06ff00.otf",
     "static/media/Logo.png": "/eventksa/static/media/Logo.a63bc30028118351b94a.png",
-    "static/media/NobelBook.otf": "/eventksa/static/media/NobelBook.74d77aa6039957fa7672.otf",
-    "static/media/nobel-light.ttf": "/eventksa/static/media/nobel-light.33553008c59f51b8e704.ttf",
+    "static/media/logo2.png": "/eventksa/static/media/logo2.56e0c805772c63990bd6.png",
     "static/media/lock.svg": "/eventksa/static/media/lock.6aceffd7cc4c677086ced47f42f8d006.svg",
     "index.html": "/eventksa/index.html",
     "static/media/PinWhite.svg": "/eventksa/static/media/PinWhite.1adbf77d7fb6ebffebace0ee2c0e05f4.svg",
     "static/media/PinOrange.svg": "/eventksa/static/media/PinOrange.938eb667e37e768c92332cdb5b615f2d.svg",
     "static/media/playButton.svg": "/eventksa/static/media/playButton.90f71aaac5ebfc062aa3c6a591f07c1e.svg",
-    "main.c837a3b1.css.map": "/eventksa/static/css/main.c837a3b1.css.map",
-    "main.0e8c001c.js.map": "/eventksa/static/js/main.0e8c001c.js.map"
+    "main.1dab19f3.css.map": "/eventksa/static/css/main.1dab19f3.css.map",
+    "main.a98ddfd5.js.map": "/eventksa/static/js/main.a98ddfd5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c837a3b1.css",
-    "static/js/main.0e8c001c.js"
+    "static/css/main.1dab19f3.css",
+    "static/js/main.a98ddfd5.js"
   ]
 }
