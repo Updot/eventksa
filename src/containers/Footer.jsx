@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Grid, FormControl, Button, Select, MenuItem } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import DownIcon from "../components/DownIcon";
@@ -25,33 +26,49 @@ function Footer() {
           <p className="follow-text">Follow Us</p>
           <div className="social-icons">
             <div className="image-container">
-              <img src={facebook} alt="Facebook" />
+              <a href="https://www.facebook.com/chaumet.arabic" target="_blank">
+                <img src={facebook} alt="Facebook" />
+              </a>
             </div>
             <div className="image-container">
-              <img src={instagram} alt="Instagram" />
+              <a
+                href="https://www.instagram.com/chaumet_arabia"
+                target="_blank"
+              >
+                <img src={instagram} alt="Instagram" />
+              </a>
             </div>
             <div className="image-container">
-              <img src={website} alt="Website" />
+              <a href="https://www.chaumet.com/ar" target="_blank">
+                <img src={website} alt="Website" />
+              </a>
             </div>
           </div>
         </Grid>
         <Grid className="item" item xs={6}>
-          <div className="link-container">
-            <div className="rect" />
-            <div className="link-text-container">
-              <p>Contact</p>
-              <h2>US</h2>
+          <a
+            style={{ textDecoration: "none", color: "white" }}
+            href="mailto:tiaradream@sa.chaumet.com"
+          >
+            <div className="link-container">
+              <div className="rect" />
+              <div className="link-text-container">
+                <p>Contact</p>
+                <h2>US</h2>
+              </div>
             </div>
-          </div>
+          </a>
         </Grid>
         <Grid className="item" item xs={6}>
-          <div className="link-container">
-            <img src={pinOrange} alt="locate us" />
-            <div className="link-text-container">
-              <p>Locate</p>
-              <h2>US</h2>
+          <Link style={{ textDecoration: "none", color: "white" }} to="/map">
+            <div className="link-container">
+              <img src={pinOrange} alt="locate us" />
+              <div className="link-text-container">
+                <p>Locate</p>
+                <h2>US</h2>
+              </div>
             </div>
-          </div>
+          </Link>
         </Grid>
       </Grid>
       <Grid container className="lower-footer">
