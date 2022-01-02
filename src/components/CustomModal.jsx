@@ -52,28 +52,32 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.up("xs")]: {
       width: "70%",
-      margin: "30px auto 60px auto",
+      margin: "30px auto",
     },
     [theme.breakpoints.up("md")]: {
       width: "60%",
-      margin: "40px auto 70px auto",
+      margin: "40px auto",
     },
   },
-  mailButton: {
-    // fontFamily: "Alef, sans-serif !important",
-    display: "block !important",
-    padding: "5px 30px !important",
-    fontSize: "1.2rem !important",
-    width: 150,
-    margin: "auto !important",
-  },
+  // mailButton: {
+  //   // fontFamily: "Alef, sans-serif !important",
+  //   display: "block !important",
+  //   padding: "5px 30px !important",
+  //   fontSize: "1.2rem !important",
+  //   width: 150,
+  //   margin: "auto !important",
+  // },
   storyButton: {
     display: "block !important",
     padding: "5px 30px !important",
-    fontSize: "1.5rem !important",
+    fontSize: "1rem !important",
     width: "85%",
     marginTop: "50px !important",
     margin: "auto !important",
+
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "1.5rem !important",
+    },
   },
 }));
 
@@ -101,7 +105,7 @@ function CustomModal({ setSuccess }) {
             A confirmation letter has been sent to your email. Please check your
             inbox.
           </p>
-          <Button
+          {/* <Button
             href="https://mail.google.com"
             target="_blank"
             variant="contained"
@@ -110,7 +114,7 @@ function CustomModal({ setSuccess }) {
             className={classes.mailButton}
           >
             Go to mail
-          </Button>
+          </Button> */}
           <Button
             href="https://www.instagram.com/ar/464500204195593/"
             target="_blank"
@@ -122,7 +126,7 @@ function CustomModal({ setSuccess }) {
             Crown Your Stories
           </Button>
           <p style={{ color: "#838383", marginTop: 10, fontSize: "1.1rem" }}>
-            Try or Tiara on Instagram
+            Try our Tiara on Instagram
           </p>
         </Box>
       </Modal>
