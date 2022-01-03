@@ -86,7 +86,7 @@ function Form({ setFailMessage }) {
   const [pickedDate, setPickedDate] = useState(null);
   const [province, setProvince] = useState("");
   // const [noOfTickets, setNoOfTickets] = useState(1);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
 
   const classes = useStyles();
 
@@ -131,7 +131,7 @@ function Form({ setFailMessage }) {
 
     if (validate()) {
       axios
-        .post("https://updot.in/chaumet/index.php/api/register", formData)
+        .post("https://tiaradreamriyadh.com/chaumet/api/register", formData)
         .then((res) => {
           if (res.data.success) {
             setSuccess(true);
